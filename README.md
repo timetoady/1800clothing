@@ -1,2 +1,3 @@
-# 1800clothing
- Has all the data and info downloaded from the original ftp site for better accesability.
+# 1800 Clothing
+
+Two files: drop from FTP site, and images directly from client Lorie

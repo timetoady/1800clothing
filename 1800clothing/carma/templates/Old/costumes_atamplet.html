@@ -1,0 +1,601 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+    <title>Carma Costumes</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="/carma/templates/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="/carma/templates/css/style.css">
+    <link href="/carma/templates/css/offcanvas.css" rel="stylesheet">
+    <link rel="stylesheet" href="/carma/templates/css/mg-space.css">
+    <script src="/carma/templates/js/modernizr.custom.js"></script>
+
+
+    <style>
+        .nav-link.active {
+            color: #46AE49!important;
+        }
+
+        .jumbotron {
+            background: rgb(46, 34, 98);
+            background: linear-gradient(180deg, rgba(46, 34, 98, 1) 0%, rgba(89, 32, 96, 1) 100%);
+            border-radius: 0rem;
+        }
+
+        .jumbotron1 {
+            background: rgb(46, 34, 98);
+            background: linear-gradient(0deg, rgba(46, 34, 98, 1) 0%, rgba(89, 32, 96, 1) 100%);
+            border-radius: 0rem;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            color: #fff;
+        }
+
+        .jumbotron-heading {
+            color: #ffffff;
+            font-family: 'Raleway', sans-serif;
+            font-weight: bold;
+        }
+
+        .sub-heading {
+            color: #292561;
+        }
+
+        .sub-heading-modal {
+            font-size: 24px;
+        }
+
+        .bg-dark {
+            background-color: #2e2262 !important;
+        }
+
+        #size {
+            display: none;
+        }
+
+        .fixwidth {
+            top: 357px !important;
+        }
+
+        .fixwidth2 {
+            top: 603px !important;
+        }
+
+        .fixwidth3 {
+            top: 849px !important;
+        }
+
+        .jumbotron {
+            padding: 2rem 2rem;
+            margin-bottom: 0rem;
+        }
+
+        .card-body {
+            background-color: #f3f3f3;
+        }
+
+        .launchBtn {
+            margin-top: 18px;
+        }
+
+        @media (min-width: 1200px) .container {
+            max-width: 1409px !important;
+        }
+
+        .sidebar {
+            background-color: #5D5989;
+            width: 400px;
+            border-right: 1px solid #ccc;
+            color: #fff;
+        }
+
+        .sidebar h4 {
+            color: #fff;
+        }
+
+        .smallText {
+            font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+            font-size: 10px;
+            line-height: 12px;
+            font-weight: normal;
+        }
+
+        /* The container */
+
+        .container1 {
+            display: block;
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            font-size: 22px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        /* Hide the browser's default checkbox */
+
+        .container1 input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+
+        /* Create a custom checkbox */
+
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 25px;
+            width: 25px;
+            background-color: #eee;
+        }
+
+        /* On mouse-over, add a grey background color */
+
+        .container1:hover input~.checkmark {
+            background-color: #ccc;
+        }
+
+        /* When the checkbox is checked, add a blue background */
+
+        .container1 input:checked~.checkmark {
+            background-color: #46ad00;
+        }
+
+        /* Create the checkmark/indicator (hidden when not checked) */
+
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+
+        /* Show the checkmark when checked */
+
+        .container1 input:checked~.checkmark:after {
+            display: block;
+        }
+
+        /* Style the checkmark/indicator */
+
+        .container1 .checkmark:after {
+            left: 9px;
+            top: 5px;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+
+<body class="default">
+    <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark ml-auto">
+        <span><a class="navbar-brand" href="aboutus.html"><img src="images/carmaPhoto.jpg" /></a></span><span class="jumbotron-heading">1800 Costume</span>
+        <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+        <div class="navbar-collapse offcanvas-collapse justify-content-between" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto text-hide">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Dashboard <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Notifications</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="costumes.html">Costumes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="aboutus.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contactus.html">Contact Us</a>
+                </li>
+                <li class="nav-item dropdown text-hide">
+                    <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Settings</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown01">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main role="main">
+        <section class="jumbotron text-center">
+            <div class="container">
+                <h1 class="jumbotron-heading">1800s Clothing Catalog</h1>
+                <div class="flex-grow-1 d-flex">
+                    <form class="form-inline flex-nowrap bg-light mx-0 mx-lg-auto rounded p-1">
+                        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-success my-2 my-sm-0" type="submit" onClick="myFunction()">Search</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+<div id="app">
+    <div class="wrapper">
+        <div class="row">
+            <div class="lg-4 sidebar">
+                <h4 class="text-center">FILTERS</h4>
+                <div style="padding-left:40px;">
+                    <h4>Time Period</h4>
+                    <label class="container1">1830-1840
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+                    <label class="container1">1840-1850
+  <input type="checkbox"  checked="checked">
+  <span class="checkmark"></span>
+</label>
+                    <label class="container1">1850-1860
+  <input type="checkbox"  checked="checked">
+  <span class="checkmark"></span>
+</label>
+                    <label class="container1">1860-1870
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+                    <label class="container1">1870-1880
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+                </div>
+                <div style="padding-left:40px;">
+                    <h4>Gender</h4>
+                    <label class="container1">Men
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+                    <label class="container1">Women
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+                    <label class="container1">Children
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+                    <label class="container1">Family
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+                </div>
+
+
+            </div>
+            <div class="lg-8" id="content">
+                <div class="mg-space-init container vert">
+                    <h1 class="sub-heading">CLOTHING FROM 1840-1860</h1>
+                    <div class="mg-rows row row-flex">
+                        <div class="xs-6 sm-4 lg-3">
+                            <img class="mg-trigger img-responsive" src="images/thumbs/33.jpg" alt="">
+                        </div>
+                        <div class="xs-6 sm-4 lg-3">
+                            <img class="mg-trigger img-responsive" src="images/thumbs/34.jpg" alt="">
+                        </div>
+                        <div class="xs-6 sm-4 lg-3">
+                            <img class="mg-trigger img-responsive" src="images/thumbs/35.jpg" alt="">
+                        </div>
+                        <div class="xs-6 sm-4 lg-3">
+                            <img class="mg-trigger img-responsive" src="images/thumbs/36.jpg" alt="">
+                        </div>
+                        <div class="xs-6 sm-4 lg-3">
+                            <img class="mg-trigger img-responsive" src="images/thumbs/33.jpg" alt="">
+                        </div>
+                        <div class="xs-6 sm-4 lg-3">
+                            <img class="mg-trigger img-responsive" src="images/thumbs/34.jpg" alt="">
+                        </div>
+                        <div class="xs-6 sm-4 lg-3">
+                            <img class="mg-trigger img-responsive" src="images/thumbs/35.jpg" alt="">
+                        </div>
+                        <div class="xs-6 sm-4 lg-3">
+                            <img class="mg-trigger img-responsive" src="images/thumbs/36.jpg" alt="">
+                        </div>
+                        <div class="xs-6 sm-4 lg-3">
+                            <img class="mg-trigger img-responsive" src="images/thumbs/33.jpg" alt="">
+                        </div>
+                        <div class="xs-6 sm-4 lg-3">
+                            <img class="mg-trigger img-responsive" src="images/thumbs/34.jpg" alt="">
+                        </div>
+                        <div class="xs-6 sm-4 lg-3">
+                            <img class="mg-trigger img-responsive" src="images/thumbs/35.jpg" alt="">
+                        </div>
+                        <div class="xs-6 sm-4 lg-3">
+                            <img class="mg-trigger img-responsive" src="images/thumbs/36.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="mg-targets row">
+                        <div class="fixwidth">
+                            <div class="container">
+                                <div class="row row-flex">
+                                    <div class="xs-4 sm-3 lg-4 demo-item">
+                                        <img src="images/33.jpg" alt="Content"></div>
+                                    <div class="lg-8 sm-3 lg-6"><span class="sub-heading-modal"><strong>Straw top hat</strong></span>
+                                        <p>Brims on straw top hats were usually wider than those on felt toppers. The docent who wore this hat had too little hair to look correct for the period, so a strip from a wig was secured inside the headband (not
+                                            seen). He also wore a brown linen smock for his work as a gardener...</p>
+                                        <p class="launchBtn">
+                                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter">View more details
+										</button>
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="fixwidth">
+                            <div class="container">
+                                <div class="row row-flex">
+                                    <div class="xs-4 sm-3 lg-4 demo-item">
+                                        <img src="images/12.jpg" alt="Content"></div>
+                                    <div class="lg-8 sm-3 lg-6"><span>Lorem ipsum dolor sit amet.</span>
+
+                                        <p class="launchBtn">
+                                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter">Launch demo modal
+										</button>
+
+                                            <!--<a href="#" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Launch demo modal
+										</a>-->
+
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="fixwidth">
+                            <div class="container">
+                                <div class="row row-flex">
+                                    <div class="xs-4 sm-3 lg-4 demo-item">
+                                        <img src="images/13.jpg" alt="Content"></div>
+                                    <div class="lg-8 sm-3 lg-6"><span>Lorem ipsum dolor sit amet.</span>
+
+                                        <p class="launchBtn">
+                                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter">Launch demo modal
+										</button>
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="fixwidth">
+                            <div class="container">
+                                <div class="row row-flex">
+                                    <div class="xs-4 sm-3 lg-4 demo-item">
+                                        <img src="images/14.jpg" alt="Content"></div>
+                                    <div class="lg-8 sm-3 lg-6"><span>Lorem ipsum dolor sit amet.</span>
+
+                                        <p class="launchBtn">
+                                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter">Launch demo modal
+										</button>
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="fixwidth2">
+                            <div class="container">
+                                <div class="row row-flex">
+                                    <div class="xs-4 sm-3 lg-4 demo-item">
+                                        <img src="images/33.jpg" alt="Content"></div>
+                                    <div class="lg-8 sm-3 lg-6"><span>Lorem ipsum dolor sit amet.</span>
+
+                                        <p class="launchBtn">
+                                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter">Launch demo modal
+										</button>
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="fixwidth2">
+                            <div class="container">
+                                <div class="row row-flex">
+                                    <div class="xs-4 sm-3 lg-4 demo-item">
+                                        <img src="images/33.jpg" alt="Content"></div>
+                                    <div class="lg-8 sm-3 lg-6"><span>Lorem ipsum dolor sit amet.</span>
+
+                                        <p class="launchBtn">
+                                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter">Launch demo modal
+										</button>
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="fixwidth2">
+                            <div class="container">
+                                <div class="row row-flex">
+                                    <div class="xs-4 sm-3 lg-4 demo-item">
+                                        <img src="images/33.jpg" alt="Content"></div>
+                                    <div class="lg-8 sm-3 lg-6"><span>Lorem ipsum dolor sit amet.</span>
+
+                                        <p class="launchBtn">
+                                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter">Launch demo modal
+										</button>
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="fixwidth2">
+                            <div class="container">
+                                <div class="row row-flex">
+                                    <div class="xs-4 sm-3 lg-4 demo-item">
+                                        <img src="images/33.jpg" alt="Content"></div>
+                                    <div class="lg-8 sm-3 lg-6"><span>Lorem ipsum dolor sit amet.</span>
+
+                                        <p class="launchBtn">
+                                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter">Launch demo modal
+										</button>
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="fixwidth3">
+                            <div class="container">
+                                <div class="row row-flex">
+                                    <div class="xs-4 sm-3 lg-4 demo-item">
+                                        <img src="images/33.jpg" alt="Content"></div>
+                                    <div class="lg-8 sm-3 lg-6"><span>Lorem ipsum dolor sit amet.</span>
+
+                                        <p class="launchBtn">
+                                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter">Launch demo modal
+										</button>
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="fixwidth3">
+                            <div class="container">
+                                <div class="row row-flex">
+                                    <div class="xs-4 sm-3 lg-4 demo-item">
+                                        <img src="images/33.jpg" alt="Content"></div>
+                                    <div class="lg-8 sm-3 lg-6"><span>Lorem ipsum dolor sit amet.</span>
+
+                                        <p class="launchBtn">
+                                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter">Launch demo modal
+										</button>
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="fixwidth3">
+                            <div class="container">
+                                <div class="row row-flex">
+                                    <div class="xs-4 sm-3 lg-4 demo-item">
+                                        <img src="images/33.jpg" alt="Content"></div>
+                                    <div class="lg-8 sm-3 lg-6"><span>Lorem ipsum dolor sit amet.</span>
+
+                                        <p class="launchBtn">
+                                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter">Launch demo modal
+										</button>
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="fixwidth3">
+                            <div class="container">
+                                <div class="row row-flex">
+                                    <div class="xs-4 sm-3 lg-4 demo-item">
+                                        <img src="images/33.jpg" alt="Content"></div>
+                                    <div class="lg-8 sm-3 lg-6"><span>Lorem ipsum dolor sit amet.</span>
+
+                                        <p class="launchBtn">
+                                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter">Launch demo modal
+										</button>
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Straw top hat </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/33.jpg" alt="" />
+                    <p>Brims on straw top hats were usually wider than those on felt toppers. The docent who wore this hat had too little hair to look correct for the period, so a strip from a wig was secured inside the headband (not seen). He also wore
+                        a brown linen smock for his work as a gardener from England, and told visitors that his father had been a gardener on a large estate in Yorkshire.</p>
+                </div>
+                <div class="modal-footer">
+                    <a id="closeDiv" href="#" data-dismiss="modal">Close</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <footer class="jumbotron1">
+        <div class="container">
+            <p>1800clothing.org &copy; 2018-2019</p>
+            <small class="smallText"><a href="#">1800clothing.org</a> has tried hard to insure images on this site are copyright free or used by permission of the owner.  If we have infringed on the copyright of any image, let us know.  According to your instructions we will either remove the image, or request your written permission to use the image for display only at no cost to us.  This website is a non-profit public service. Thank you!</small>
+        </div>
+    </footer>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="/carma/templates/js/costumes_vue.js"></script>
+
+
+    Placed at the end of the document so the pages load faster
+    <script src="/carma/templates/js/jquery-slim.min.js"></script>
+    <script src="/carma/templates/js/popper.min.js"></script>
+    <script src="/carma/templates/js/bootstrap.min.js"></script>
+    <script src="/carma/templates/js/holder.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="/carma/templates/js/jquery.mg-space.js"></script>
+    <script src="/carma/templates/js/app.js"></script>
+    <script src="/carma/templates/js/offcanvas.js"></script>
+
+
+
+</body>
+
+</html>

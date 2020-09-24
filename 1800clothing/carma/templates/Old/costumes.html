@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+    <title>Carma Costumes</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+    <link rel="stylesheet" href="/carma/templates/css/style.css">
+    <link href="/carma/templates/css/offcanvas.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/bootstrap@3.3.7/js/modal.js"></script>
+    <script src="https://unpkg.com/axios@0.16.2/dist/axios.min.js"></script>
+
+
+    <style>
+        .nav-link.active {
+            color: #46AE49!important;
+        }
+
+        .jumbotron {
+            background: rgb(46, 34, 98);
+            /*background: linear-gradient(180deg, rgba(46, 34, 98, 1) 0%, rgba(89, 32, 96, 1) 100%);*/
+            background-image: url("/carma/templates/images/HeroFinal.png");
+             background-size: cover;
+            border-radius: 0rem;
+        }
+
+        .jumbotron1 {
+            background: rgb(46, 34, 98);
+            /*background: linear-gradient(0deg, rgba(46,34,98,1) 0%, rgba(89,32,96,1) 100%);\*/
+     /*background-image: url("/carma/templates/images/HeroFinal.png");*/
+     /*background-size: cover;*/
+            border-radius: 0rem;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            color: #fff;
+        }
+
+        .jumbotron-heading {
+            color: #ffffff;
+            font-family: 'Raleway', sans-serif;
+            font-weight: bold;
+        } 
+
+        .sub-heading {
+            color: #292561;
+        }
+
+        .sub-heading-modal {
+            font-size: 24px;
+        }
+
+        .bg-dark {
+            background-color: #2e2262 !important;
+        }
+
+        #size {
+            display: none;
+        }
+
+        .fixwidth {
+            top: 357px !important;
+        }
+
+        .fixwidth2 {
+            top: 603px !important;
+        }
+
+        .fixwidth3 {
+            top: 849px !important;
+        }
+
+        .jumbotron {
+            padding: 2rem 2rem;
+            margin-bottom: 0rem;
+        }
+
+        .card-body {
+            background-color: #f3f3f3;
+        }
+
+        .launchBtn {
+            margin-top: 18px;
+        }
+
+        @media (min-width: 1200px) .container {
+            max-width: 1409px !important;
+        }
+
+        .sidebar {
+            background-color: #5D5989;
+            width: 400px;
+            border-right: 1px solid #ccc;
+            color: #fff;
+        }
+
+        .sidebar h4 {
+            color: #fff;
+        }
+
+        .smallText {
+            font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+            font-size: 10px;
+            line-height: 12px;
+            font-weight: normal;
+        }
+
+        /* The container */
+
+        .container1 {
+            display: block;
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            font-size: 22px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        /* Hide the browser's default checkbox */
+
+        .container1 input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+
+        /* Create a custom checkbox */
+
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 25px;
+            width: 25px;
+            background-color: #eee;
+        }
+
+        /* On mouse-over, add a grey background color */
+
+        .container1:hover input~.checkmark {
+            background-color: #ccc;
+        }
+
+        /* When the checkbox is checked, add a blue background */
+
+        .container1 input:checked~.checkmark {
+            background-color: #46ad00;
+        }
+
+        /* Create the checkmark/indicator (hidden when not checked) */
+
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+
+        /* Show the checkmark when checked */
+
+        .container1 input:checked~.checkmark:after {
+            display: block;
+        }
+
+        /* Style the checkmark/indicator */
+
+        .container1 .checkmark:after {
+            left: 9px;
+            top: 5px;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+
+<body class="default">
+    <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark ml-auto">
+        <span><a class="navbar-brand" href="aboutus.html"><img src="images/carmaPhoto.jpg" /></a></span>
+        <br>
+        <div class="navbar-collapse offcanvas-collapse justify-content-between" id="navbarsExampleDefault">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="costumes.html">Costumes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="aboutus.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contactus.html">Contact Us</a>
+                </li>
+        </div>
+    <main role="main">
+        <section class="jumbotron text-center">
+            <div class="container">
+                <h1 class="jumbotron-heading-custom" style="color: #ffffff;">1800s Clothing Catalog</h1>
+                <div class="flex-grow-1 d-flex">
+                    <form class="form-inline flex-nowrap bg-light mx-0 mx-lg-auto rounded p-1">
+                        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-success my-2 my-sm-0" type="submit" onClick="myFunction()">Search</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    </nav>
+    <div id="app">
+        <div class="wrapper">
+            <div class="row">
+                <div class="lg-4 sidebar">
+                    <h4 class="text-center">FILTERS</h4>
+                    <div style="padding-left:40px;">
+                        <h4>Time Period</h4>
+                        <label class="container1">1830-1840
+                      <input type="checkbox">
+                      <span class="checkmark"></span>
+                    </label>
+                        <label class="container1">1840-1850
+                      <input type="checkbox"  checked="checked">
+                      <span class="checkmark"></span>
+                    </label>
+                        <label class="container1">1850-1860
+                      <input type="checkbox"  checked="checked">
+                      <span class="checkmark"></span>
+                    </label>
+                        <label class="container1">1860-1870
+                      <input type="checkbox">
+                      <span class="checkmark"></span>
+                    </label>
+                        <label class="container1">1870-1880
+                      <input type="checkbox">
+                      <span class="checkmark"></span>
+                    </label>
+                    </div>
+                    <div style="padding-left:40px;">
+                        <h4>Gender</h4>
+                        <label class="container1">Men
+                      <input type="checkbox">
+                      <span class="checkmark"></span>
+                    </label>
+                        <label class="container1">Women
+                      <input type="checkbox">
+                      <span class="checkmark"></span>
+                    </label>
+                        <label class="container1">Children
+                      <input type="checkbox">
+                      <span class="checkmark"></span>
+                    </label>
+                        <label class="container1">Family
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+                    </div>
+
+
+                </div>
+
+                <div class="lg-8" id="content">
+                    <div class="mg-space-init container vert">
+                        <h1 class="sub-heading">1800's CLOTHING</h1>
+
+                        <div class="mg-rows row row-flex">
+                            <div v-for="costume in allCostumes" class="xs-6 sm-4 lg-3">
+                                <img style="cursor: pointer;" data-toggle="modal" v-bind:data-target="'#' + costume.id" class=" img-responsive" v-bind:src="costume.thumbnail" alt="">
+                                <div>
+                                    <p>{{costume.person}}(s) {{costume.clothing}} {{costume.year_from}} - {{costume.year_to}}</p>
+                                </div>
+                                <!--Modal -->
+                                <div class="modal fade" v-bind:id="costume.id" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                    <div class="modal-dialog modal-xl modal-dialog-centered" style="width:55%" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h4 class="modal-title" id="exampleModalLongTitle">{{costume.caption}}</h4>
+                                                <!--<img v-bind:src="costume.image" alt="" />-->
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                      <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <img v-bind:src="costume.image" alt="" />
+                                                <!--{{costume.description}}-->
+                                            </div>
+                                            <div class="modal-footer">
+                                                <!--<a id="closeDiv" href="#" data-dismiss="modal">Close</a>-->
+                                                <p><strong>Discription:</strong> {{costume.description}}</p>
+                                                <p><strong>Source:</strong> {{costume.source}}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end of app div-->
+
+    <footer class="jumbotron1">
+        <div class="container">
+            <p>1800clothing.org &copy; 2018-2019</p>
+            <small class="smallText"><a href="#">1800clothing.org</a> has tried hard to insure images on this site are copyright free or used by permission of the owner.  If we have infringed on the copyright of any image, let us know.  According to your instructions we will either remove the image, or request your written permission to use the image for display only at no cost to us.  This website is a non-profit public service. Thank you!</small>
+        </div>
+    </footer>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
+    <script type="text/javascript" src="/carma/templates/js/costumes_vue.js"></script>
+
+
+
+</body>
+
+</html>

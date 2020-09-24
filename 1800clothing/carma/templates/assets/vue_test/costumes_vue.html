@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="1800 Clothing">
+  <meta name="author" content="Carma">
+  <link rel="icon" href="dist/img/vue-logo.png">
+
+  <title>Costumes</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <!--<link href="dist/css/pagination-style.css" rel="stylesheet">-->
+  <link rel="stylesheet" href="dist/css/mdi-icons.css">
+
+  <style type="text/css">
+    .thumbnail img {
+      max-width: 420px;
+    }
+  </style>
+
+
+
+</head>
+
+
+<body>
+
+  <header>
+    <div class="collapse bg-dark" id="navbarHeader">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 col-md-7 py-4">
+            <h4 class="text-white">About</h4>
+            <p class="text-muted">This is a demo of my Medium post Pagination with Vuejs</p>
+          </div>
+          <div class="col-sm-4 offset-md-1 py-4">
+            <h4 class="text-white">Contact</h4>
+            <ul class="list-unstyled">
+              <li><a href="http://twitter.com/obapelumi_" class="text-white">Follow on Twitter</a></li>
+              <li><a href="tel:+2347065923918" class="text-white">Call me</a></li>
+              <li><a href="mailto:emmolomolaiye@yahoo.com" class="text-white">Email me</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="navbar navbar-dark bg-dark box-shadow">
+      <div class="container d-flex justify-content-between">
+        <a href="#" class="navbar-brand d-flex align-items-center">
+            <strong>All Costumes Search and Pagination</strong>
+          </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      </div>
+    </div>
+  </header>
+
+  <main role="main" id="carma-app">
+    <!--<section class="jumbotron text-center">-->
+    <!--  <div class="container">-->
+    <!--<h1 class="jumbotron-heading">Pagination With Vuejs</h1>-->
+    <!--<p class="lead text-muted">This is a demo of my Medium post Pagination with Vuejs.</p>-->
+    <!--    <p>-->
+    <!-- <a href="#" class="btn btn-primary my-2">Main call to action</a>
+    <!--        <a href="#" class="btn btn-secondary my-2">Secondary action</a> -->
+    <!--    </p>-->
+
+    <!--  </div>-->
+    <!--</section>-->
+
+
+
+
+    <h1 class="text-center">1800's Costumes - All costumes GET Call</h1>
+    <div class="album py-5 bg-light">
+
+      <div class="container-fluid" v-cloak>
+        <div class="row">
+          <div class="col">
+            <div class="row">
+              <div class="col-lg-2">
+                <div class="form-group has-search">
+                  <span class="fa fa-search form-control-feedback"></span>
+                  <input type="text" v-model="searchInput" class="form-control" placeholder="Search">
+
+                  <!--Radio Buttons-->
+                  <h5>Search by Decade</h5>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input @click="yearRangeSearch(1800, 1810)" type="radio" class="custom-control-input" id="customRadio1" name="example">
+                    <label class="custom-control-label" for="customRadio1">1800 - 1810</label>
+                  </div>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input @click="yearRangeSearch(1810, 1820)" type="radio" class="custom-control-input" id="customRadio2" name="example">
+                    <label class="custom-control-label" for="customRadio2">1810 - 1820</label>
+                  </div>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input @click="yearRangeSearch(1820, 1830)" type="radio" class="custom-control-input" id="customRadio3" name="example">
+                    <label class="custom-control-label" for="customRadio3">1820 - 1830</label>
+                  </div>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input @click="yearRangeSearch(1830, 1840)" type="radio" class="custom-control-input" id="customRadio4" name="example">
+                    <label class="custom-control-label" for="customRadio4">1830 - 1840</label>
+                  </div>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input @click="yearRangeSearch(1840, 1850)" type="radio" class="custom-control-input" id="customRadio5" name="example">
+                    <label class="custom-control-label" for="customRadio5">1840 - 1850</label>
+                  </div>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input @click="yearRangeSearch(1850, 1860)" type="radio" class="custom-control-input" id="customRadio6" name="example">
+                    <label class="custom-control-label" for="customRadio6">1850 - 1860</label>
+                  </div>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input @click="yearRangeSearch(1860, 1870)" type="radio" class="custom-control-input" id="customRadio7" name="example">
+                    <label class="custom-control-label" for="customRadio7">1860 - 1870</label>
+                  </div>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input @click="yearRangeSearch(1870, 1880)" type="radio" class="custom-control-input" id="customRadio8" name="example">
+                    <label class="custom-control-label" for="customRadio8">1870 - 1880</label>
+                  </div>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input @click="yearRangeSearch(1880, 1890)" type="radio" class="custom-control-input" id="customRadio9" name="example">
+                    <label class="custom-control-label" for="customRadio9">1880 - 1890</label>
+                  </div>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input @click="yearRangeSearch(1890, 1900)" type="radio" class="custom-control-input" id="customRadio10" name="example">
+                    <label class="custom-control-label" for="customRadio10">1890 - 1900</label>
+                  </div>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input @click="getAllCostumes()" type="radio" class="custom-control-input" id="customRadio11" name="example">
+                    <label class="custom-control-label" for="customRadio11">Show all from 1800 to 1900</label>
+                  </div>
+
+
+                  <!--Checkbox Buttons-->
+                  <h5>Filter by Person</h5>
+                  <div class="form-check">
+                    <input @click="checkMark()" class="form-check-input" type="checkbox" value="family" v-model="checkedItems" id="family" vchecked>
+                    <label class="form-check-label" for="defaultCheck1">
+                      Family
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="women" v-model="checkedItems" id="women">
+                    <label class="form-check-label" for="defaultCheck2">
+                      Women
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="men" v-model="checkedItems" id="men">
+                    <label class="form-check-label" for="defaultCheck3">
+                      Men
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="child" v-model="checkedItems" id="child">
+                    <label class="form-check-label" for="defaultCheck4">
+                      Child
+                    </label>
+                  </div>
+
+
+                </div>
+              </div>
+              <div class="col-lg-9">
+                <div class="row">
+                  <div class="col-lg-4 mx-auto text-center" v-for="costume in displayedCostumes">
+                    <div class="card mb-4 box-shadow post-cards card-img-top">
+                      <div class="card-body thumbnail" style="cursor: pointer;" data-toggle="modal" v-bind:data-target="'#' + costume.id">
+                        <img style="cursor: pointer;" class="img-responsive" v-bind:src="costume.thumbnail" alt="Card image cap" data-toggle="modal" v-bind:data-target="'#' + costume.id" class=" img-responsive">
+                        <h5 class="capitalize">Costume Id: {{costume.id}} Years {{costume.year_from}} - {{costume.year_to}}, {{costume.person}}</h5>
+                        <!--Buttons for Admin Mode-->
+                        <!--<p class="card-text">{{post.description}}...</p>-->
+                        <!--<div class="d-flex justify-content-between align-items-center">-->
+                        <!--    <div class="btn-group">-->
+                        <!--   <button type="button" class="btn btn-sm btn-outline-secondary">View</button>-->
+                        <!--<button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                        <!--    </div>-->
+
+                      </div>
+                      <!--Modal-->
+                      <div class="modal fade bd-example-modal-xl" v-bind:id="costume.id" tabindex="-1" role="dialog" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header" style="text-align: left;">
+                              <h5 class="modal-title" id="exampleModalLabel"><span style="text-transform: capitalize;">{{costume.person}}</span> clothing from {{costume.year_from}} to {{costume.year_to}}. {{costume.caption}}</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                              <img style="cursor: pointer;" class="img-fluid" v-bind:src="costume.image" alt="Card image cap" target="_blank">
+                              <div><a v-bind:href="costume.image" target="_blank">Open Full Size Image</a></div>                           
+                            </div>
+                            <div class="modal-footer" style="text-align: left;">
+                              <div class="row">
+                                <div class="col-lg-12 mx-auto"><b>Description:</b> {{costume.description}}</div>
+                                <div class="col-lg-12 mx-auto"><b>Source:</b> {{costume.source}}</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="clearfix btn-group col-md-2 offset-md-5">
+        <button type="button" class="btn btn-sm btn-outline-secondary page-link" v-if="page != 1" @click="page--"> Previous  </button>
+        <button type="button" class="btn btn-sm btn-outline-secondary page-link" v-for="pageNumber in pages.slice(page-1, page+5)" @click="page = pageNumber"> {{pageNumber}} </button>
+        <button type="button" @click="page++" v-if="page < pages.length" class="btn btn-sm btn-outline-secondary page-link"> Next </button>
+      </div>
+    </div>
+
+    </div>
+
+  </main>
+
+    <footer class="jumbotron1">
+        <div class="container">
+            <p>1800clothing.org &copy; 2018-2019</p>
+            <small class="smallText"><a href="#">1800clothing.org</a> has tried hard to insure images on this site are copyright free or used by permission of the owner.  If we have infringed on the copyright of any image, let us know.  According to your instructions we will either remove the image, or request your written permission to use the image for display only at no cost to us.  This website is a non-profit public service. Thank you!</small>
+        </div>
+    </footer>
+
+
+
+  <!--<footer class="text-muted">-->
+  <!--  <div class="container">-->
+  <!--    <p class="float-right">-->
+  <!--      Footer Goes Here-->
+  <!--    </p>-->
+  <!--  </div>-->
+  <!--</footer>-->
+
+  <!-- Bootstrap core JavaScript
+    ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="dist/js/jquery.min.js"></script>
+  <script src="dist/js/popper.min.js"></script>
+  <script src="dist/js/bootstrap.min.js"></script>
+  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>-->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <!--<script src="dist/js/vue.min.js"></script>-->
+  <script src="dist/js/axios.min.js"></script>
+  <script src="dist/js/costumes_vue.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">	
+    <title>About Carma</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+	      <link rel="stylesheet" href="css/style.css">
+    <link href="css/offcanvas.css" rel="stylesheet">
+	   <link rel="stylesheet" href="css/mg-space.css">
+<!--    <script src="js/modernizr.custom.js"></script>-->
+	  <style>
+		  .smallText{
+		font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+		font-size: 10px;
+		line-height: 12px;
+		font-weight: normal;
+	}
+		  .jumbotron{
+			  padding: 2rem 2rem;
+		  }
+		  .bg-dark {
+    background-color: #366ba1 !important;
+}
+	  </style>
+<script>
+
+    function getAllCustomes() {
+  
+      axios({
+        url: 'https://carma-viktorc.c9users.io/carma/public/costumes',
+        method: 'get',
+        data: {
+          foo: 'bar'
+        }
+      });
+      
+    }
+      
+      
+      function getOneCustome(custome) {
+      
+        axios({
+          url: 'https://carma-viktorc.c9users.io/carma/public/costume/' + custome,
+          method: 'get',
+          //headers: {'Authorization': "bearer " + '4uSAWLWVE9wuV5KH'},
+          data: {
+            foo: 'bar'
+          }
+        });
+      }
+      
+      function getSearch(year) {
+        axios({
+          url: 'https://carma-viktorc.c9users.io/carma/public/search/' + year,
+          method: 'get',
+          data: {
+            foo: 'bar'
+          }
+        });
+      }
+
+      function getDecade(year_from, year_to) {
+        axios({
+          url: 'https://carma-viktorc.c9users.io/carma/public/yearssearch/' + year_from + '/' + year_to,
+          method: 'get',
+          data: {
+            foo: 'bar'
+          }
+        });
+      }
+      
+      function putUpdateInfo(costume) {
+        axios({
+          url: 'https://carma-viktorc.c9users.io/carma/public/costume/' + costume,
+          method: 'put',
+          data: {
+            year_from: '1000',
+            year_to: '2000',
+            person: 'Updated',
+            clothing: 'Updated',
+            caption: 'Updated',
+            description: 'Updated',
+            source: 'Updated'
+          }
+        }).then(function (response) {
+        console.log(response);
+        });
+      }
+      
+      // still needs to be developed 
+      function putUpdateImage(costume) {
+        axios({
+          url: 'https://carma-viktorc.c9users.io/carma/public/updateimg/' + costume,
+          method: 'post',
+          data: {
+            year_from: '1000',
+          }
+        });
+      }
+      
+      
+      function postNewAccount() {
+        axios({
+          url: 'https://carma-viktorc.c9users.io/carma/public/costume',
+          method: 'post',
+          data: {
+            year_from: '1000',
+            year_to: '2000',
+            person: 'New Account',
+            clothing: 'New Account',
+            caption: 'New Account',
+            description: 'New Account',
+            source: 'New Account'
+          }
+        }).then(function (response) {
+        console.log(response);
+        });
+      }
+      
+      
+      function deleteAccount(costume) {
+        axios({
+          url: 'https://carma-viktorc.c9users.io/carma/public/costume/' + costume,
+          method: 'delete',
+          data: {
+            test: 'test',
+          }
+        });
+      }
+
+
+</script>
+
+  </head>
+
+  <body class="default">
+
+    <div><button type="button" class="btn btn-primary" onClick="getAllCustomes()">Get All Costumes</button></div>
+		<div><button type="button" class="btn btn-secondary" onClick="getOneCustome(11)">Get One Costume</button></div>
+    <div><button type="button" class="btn btn-success" onClick="getSearch(1855)">Get Search</button></div>
+    <div><button type="button" class="btn btn-info" onClick="getDecade(1860, 1870)">Get 1860-1870</button></div>
+    <div><button type="button" class="btn btn-warning" onClick="putUpdateInfo(339)">Put Updated Info</button></div>
+    <div><button type="button" class="btn btn-danger" onClick="putUpdateImage(339)">Put Updated Image</button></div>
+    <div><button type="button" class="btn btn-dark" onClick="postNewAccount()">Post Create New Costume</button></div>
+    <div><button type="button" class="btn btn-danger" onClick="deleteAccount(342)">Delete An Account</button></div>
+    <!--<div><button type="button" class="btn btn-link">Link</button></div>   -->
+
+
+<div class="form-group">
+  <textarea class="form-control" rows="5" type="text" disabled></textarea>
+</div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  <!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>-->
+   <script src="/carma/templates/js/jquery-slim.min.js"></script>
+    <script src="/carma/templates/js/popper.min.js"></script>
+    <script src="/carma/templates/js/bootstrap.min.js"></script>
+    <script src="/carma/templates/js/holder.min.js"></script>
+	      <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+	      <script src="/carma/templates/js/jquery.mg-space.js"></script>
+	      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!--<script src="js/app.js"></script>-->
+	  
+	  <script type="text/javascript">
+
+function openModal(){
+
+    $('#myModal').modal();
+}       
+</script>
+<script src="/carma/templates/js/offcanvas.js"></script>
+    <script>
+      Holder.addTheme('thumb', {
+        bg: '#55595c',
+        fg: '#eceeef',
+        text: 'Thumbnail'
+      });
+    </script>	
+	  	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	  <script src="js/grid.js"></script>
+		<script>
+			$(function() {
+				Grid.init();
+			});
+		</script>-->
+	
+  </body>
+</html>

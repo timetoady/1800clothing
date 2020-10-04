@@ -10,19 +10,11 @@
   </ul>
 </header> */}
 
+//Menu button controller
+
 let menuButton = document.querySelector(".menu-btn")
 let menuIcon = document.querySelector(".navicon")
 let menu = document.querySelector(".menu")
-
-// menuButton.addEventListener("click", () => {
-//    menu.style.display = "block"
-//   console.log("Clicked!")
-// })
-
-// menuIcon.addEventListener("click", () => {
-//   menu.style.display = "none" ? menu.style.display = "block" : menu.style.display = "none"
-//   console.log("Clicked!")
-// })
 
 menuButton.addEventListener('click', (e) => {
    if (window.getComputedStyle(menu).display === 'block') {

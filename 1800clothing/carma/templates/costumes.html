@@ -69,7 +69,9 @@
 html, body {
   height: 100%;
 }    
-
+footer{
+  position: fixed;
+}
     .jumbotron-heading {
       color: #ffffff;
       font-family: 'Raleway', sans-serif;
@@ -189,17 +191,20 @@ html, body {
   <div class="page-container">
   
     <header class="header">
-      <a href="index.html" class="logo"><img src="assets/hatlogo.png"></a>
+      <div class="flexer2">
+      <a href="./index.html" class="logo"><img src="./assets/hatlogo.png"></a>
       <input class="menu-btn" type="checkbox" id="menu-btn" />
       <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+
+  </div>
       <ul class="menu">
-      <li><a href="http://www.1800clothing.org">Home</a></li>
-        <li><a href="costumes.html">Costumes</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="permissions.html">Permissions</a></li>
-      </ul>
-    </header>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./costumes.html">Costumes</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+          <li><a href="./permissions.html">Permissions</a></li>
+  </div>
+  </header>
 
     <!-- <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark ml-auto">
     <span><a class="navbar-brand" href="aboutus.html"><img src="images/carmaPhoto.jpg" alt="" /></a></span><span class="jumbotron-heading">1800's Clothing</span>
@@ -374,11 +379,11 @@ html, body {
         <button type="button" @click="page++" v-if="page < pages.length" class="btn btn-sm btn-outline-secondary page-link"> Next </button>
       </div>
       </ul>
-      <footer id='bottomFoot'>
-        <div>
-            <p>1800Clothing.org &copy; 2018-2019</p>
-        </div>
-      </footer>
+
+      
+      <footer>
+        <p>1800Clothing.org &copy; 2018-2019</p>
+</footer>
     </div>
 
   </main>
@@ -397,6 +402,7 @@ html, body {
   <script src="js/costumes_vue.js"></script>
 
   </div>
+  <script type="text/javascript" src="./script.js"></script>
 </body>
 
 </html>

@@ -304,10 +304,8 @@ template {
   display: none; }
 
 /*----- Clearfix: Force an Element not to collapse -----*/
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both; }
+html {
+  overflow-y: scroll; }
 
 html, body {
   margin: 0;
@@ -321,12 +319,14 @@ html, body {
   box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
   position: fixed;
   width: 100%;
-  z-index: 3;
-  margin-bottom: 10vh; }
+  z-index: 3; }
   .header img {
     width: 12rem;
-    height: auto;
     padding-right: .35rem; }
+
+.flexer2 {
+  display: flex;
+  justify-content: space-between; }
 
 .header ul {
   margin: 0;
@@ -347,27 +347,28 @@ html, body {
 
 .header .logo {
   display: block;
-  float: left;
   font-size: 2em;
   padding-left: 10px;
   text-decoration: none;
   color: white;
   padding-top: .25rem; }
   .header .logo img {
-    padding-top: .5rem; }
+    padding-top: .5rem;
+    margin-right: 20px; }
 
 /* menu */
 .header .menu {
-  clear: both;
-  max-height: 0;
   transition: max-height .2s ease-out; }
 
 /* menu icon */
+.menu {
+  display: none; }
+
 .header .menu-icon {
   cursor: pointer;
   display: inline-block;
-  float: right;
-  padding: 28px 20px;
+  padding: 28px 25px;
+  margin-top: 8px;
   position: relative;
   user-select: none; }
 
@@ -417,16 +418,15 @@ html, body {
 
 /* 48em = 768px */
 @media (min-width: 52em) {
-  .header li {
-    float: left; }
+  .header ul {
+    display: flex;
+    justify-content: space-evenly; }
 
   .header li a {
     padding: 20px 30px; }
 
   .header .menu {
-    clear: none;
-    float: right;
-    max-height: none; }
+    margin: 0; }
 
   .header .menu-icon {
     display: none; } }
@@ -481,42 +481,47 @@ html, body {
   .yearCard h3 {
     text-align: center;
     color: white;
-    font-size: 2rem;
+    font-size: 1.5rem;
     display: block;
     background-color: rgba(0, 100, 0, 0.788);
     position: relative;
     padding-top: 30px;
     padding-bottom: 30px;
-    top: -132px; }
+    top: -128px; }
 
 footer {
   color: lightgrey;
   background-color: #2E2261;
   font-weight: lighter;
-  padding-top: .1rem;
-  padding-bottom: .1rem;
   text-align: center;
-  font-size: .75rem; }
+  font-size: .75rem;
+  padding: 1rem 0;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0; }
+
+footer p {
+  margin: 0; }
 
 .contentwrapper {
-  width: 86%;
+  max-width: 86%;
   margin: 0 auto;
   margin-bottom: 5vh; }
   .contentwrapper h1 {
     padding-top: 15vh;
     margin: 0; }
-
-#permissionWrapper {
-  margin-bottom: 65vh; }
+  .contentwrapper h2 {
+    font-size: 1.2rem; }
 
 .about-container {
   max-width: 84%;
-  margin: auto;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: minmax(250px, auto);
   gap: 10px;
-  margin-bottom: 10vh; }
+  margin-bottom: 0 !important; }
 
 .carma-photo {
   justify-self: center;
@@ -526,11 +531,6 @@ footer {
 #test {
   padding-top: 20vh;
   margin: 0; }
-
-#bottomFoot {
-  position: fixed;
-  bottom: 0;
-  width: 100%; }
 
 @media only screen and (min-width: 30rem) {
   #aside1 {
@@ -562,7 +562,27 @@ footer {
 /* end of media query */
 @media only screen and (min-width: 60rem) {
   .about-container {
-    max-width: 64%; } }
+    max-width: 64%; }
+
+  .siteWrap {
+    min-height: calc(100vh - 57px); }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0; }
+
+  .menu {
+    display: block; }
+
+  .header .logo img {
+    padding-top: 0;
+    margin-right: 0; }
+
+  footer {
+    position: relative;
+    left: 0;
+    bottom: 0; } }
 /* end of media query */
 
 /*# sourceMappingURL=styles.css.map */

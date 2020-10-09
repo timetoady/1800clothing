@@ -1,8 +1,9 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href="carma/templates/scss/styles.css" rel="stylesheet">
+    <link href="./scss/styles.css" rel="stylesheet">
     <meta charset="UTF-8">
     <title>Home</title>
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400&display=swap" rel="stylesheet">
@@ -10,117 +11,119 @@
         function searchByYear() {
             let input = document.getElementById("saveData");
             localStorage.setItem("year", input.value);
-            window.open('/carma/templates/costumes.html', '_self');
+            window.open('./costumes.html', '_self');
         }
-        
+
         function searchByRanges(year_from, year_to) {
             localStorage.setItem("year_from", year_from);
             localStorage.setItem("year_to", year_to);
-            window.open('/carma/templates/costumes.html', '_self');
+            window.open('./costumes.html', '_self');
         }
     </script>
 </head>
 
 <body>
+<div class="siteWrap">
+    <header class="header">
+        <div class="flexer2">
+        <a href="./index.html" class="logo"><img src="./assets/hatlogo.png"></a>
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+    </div>
 
-        <header class="header">
-                <a href="carma/templates/costumes.html" class="logo"><img src="carma/templates/assets/hatlogo.png"></a>
-                <input class="menu-btn" type="checkbox" id="menu-btn" />
-                <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
-                <ul class="menu">
-                <li><a href="http://www.1800clothing.org">Home</a></li>
-                  <li><a href="carma/templates/costumes.html">Costumes</a></li>
-                  <li><a href="carma/templates/about.html">About</a></li>
-                  <li><a href="carma/templates/contact.html">Contact</a></li>
-                  <li><a href="carma/templates/permissions.html">Permissions</a></li>
-                </ul>
-        </header>
+        <ul class="menu">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./costumes.html">Costumes</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="./permissions.html">Permissions</a></li>
+   
+    </header>
 
-        <div class="pageTitle">
-            <h1>Search By Year</h1>
+    <div class="pageTitle">
+        <h1>Search By Year</h1>
+    </div>
+
+    <div class="flexContainer">
+
+        <div class="yearCard">
+            <a href="#" onClick="searchByRanges(1800, 1810)">
+                <img src="./assets/1800s.jpg" alt="1800s">
+                <h3>1800-1819</h3>
+            </a>
         </div>
 
-        <div class="flexContainer">
-
-            <div class="yearCard">
-                <a href="#" onClick="searchByRanges(1800, 1810)">
-                <img src="carma/templates/assets/1800s.jpg" alt="1800s">
-                <h3>1800</h3>
-                </a>
-            </div>
-
-            <div class="yearCard">
+        <!-- <div class="yearCard">
                     <a href="#" onClick="searchByRanges(1810, 1820)">
-                    <img src="carma/templates/assets/1810s.jpg" alt="1800s">
+                    <img src="./assets/1810s.jpg" alt="1800s">
                     <h3>1810</h3>
                     </a>
-                </div>
+                </div> -->
 
-                <div class="yearCard">
-                        <a href="#" onClick="searchByRanges(1820, 1830)">
-                        <img src="carma/templates/assets/1820s.jpg" alt="1800s">
-                        <h3>1820</h3>
-                        </a>
-                    </div>
-
-                    <div class="yearCard">
-                            <a href="#" onClick="searchByRanges(1830, 1840)">
-                            <img src="carma/templates/assets/1830s.jpg" alt="1800s">
-                            <h3>1830</h3>
-                            </a>
-                        </div>
-
-                        <div class="yearCard">
-                                <a href="#" onClick="searchByRanges(1840, 1850)">
-                                <img src="carma/templates/assets/1840s.jpg" alt="1800s">
-                                <h3>1840</h3>
-                                </a>
-                            </div>
-
-                            <div class="yearCard">
-                                    <a href="#" onClick="searchByRanges(1850, 1860)">
-                                    <img src="carma/templates/assets/1850s.jpg" alt="1800s">
-                                    <h3>1850</h3>
-                                    </a>
-                                </div>
-
-                                <div class="yearCard">
-                                        <a href="#" onClick="searchByRanges(1860, 1870)">
-                                        <img src="carma/templates/assets/1860s.jpg" alt="1800s">
-                                        <h3>1860</h3>
-                                        </a>
-                                    </div>
-
-                                    <div class="yearCard">
-                                            <a href="#" onClick="searchByRanges(1870, 1880)">
-                                            <img src="carma/templates/assets/1870s.jpg" alt="1800s">
-                                            <h3>1870</h3>
-                                            </a>
-                                        </div>
-
-                                        <div class="yearCard">
-                                                <a href="#" onClick="searchByRanges(1880, 1890)">
-                                                <img src="carma/templates/assets/1880s.jpg" alt="1800s">
-                                                <h3>1880</h3>
-                                                </a>
-                                            </div>
-                                            <div class="yearCard">
-                                                    <a href="#" onClick="searchByRanges(1890, 1900)">
-                                                    <img src="carma/templates/assets/1890s.jpg" alt="1800s">
-                                                    <h3>1890</h3>
-                                                    </a>
-                                                </div>
-
-
-            
+        <div class="yearCard">
+            <a href="#" onClick="searchByRanges(1820, 1830)">
+                <img src="./assets/1820s.jpg" alt="1800s">
+                <h3>1820-1829</h3>
+            </a>
         </div>
-            
-        <footer id='bottomFoot'>
-            <div>
-                    <p>1800Clothing.org &copy; 2018-2019</p>
-            </div>
-        </footer>
-    
-    
-    </body>
-    </html>
+
+        <div class="yearCard">
+            <a href="#" onClick="searchByRanges(1830, 1840)">
+                <img src="./assets/1830s.jpg" alt="1800s">
+                <h3>1830-1839</h3>
+            </a>
+        </div>
+
+        <div class="yearCard">
+            <a href="#" onClick="searchByRanges(1840, 1850)">
+                <img src="./assets/1840s.jpg" alt="1800s">
+                <h3>1840-1849</h3>
+            </a>
+        </div>
+
+        <div class="yearCard">
+            <a href="#" onClick="searchByRanges(1850, 1860)">
+                <img src="./assets/1850s.jpg" alt="1800s">
+                <h3>1850-1859</h3>
+            </a>
+        </div>
+
+        <div class="yearCard">
+            <a href="#" onClick="searchByRanges(1860, 1870)">
+                <img src="./assets/1860s.jpg" alt="1800s">
+                <h3>1860-1869</h3>
+            </a>
+        </div>
+
+        <div class="yearCard">
+            <a href="#" onClick="searchByRanges(1870, 1880)">
+                <img src="./assets/1870s.jpg" alt="1800s">
+                <h3>1870-1879</h3>
+            </a>
+        </div>
+
+        <div class="yearCard">
+            <a href="#" onClick="searchByRanges(1880, 1890)">
+                <img src="./assets/1880s.jpg" alt="1800s">
+                <h3>1880-1889</h3>
+            </a>
+        </div>
+        <div class="yearCard">
+            <a href="#" onClick="searchByRanges(1890, 1900)">
+                <img src="./assets/1890s.jpg" alt="1800s">
+                <h3>1890-1899</h3>
+            </a>
+        </div>
+
+
+
+    </div>
+</div>
+    <footer>
+            <p>1800Clothing.org &copy; 2018-2019</p>
+    </footer>
+
+    <script type="text/javascript" src="./script.js"></script>
+</body>
+
+</html>

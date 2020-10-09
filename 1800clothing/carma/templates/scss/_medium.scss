@@ -1,3 +1,37 @@
-.about-container{
-    grid-template-columns: 1fr 1fr;
-  }
+#aside1{
+  grid-area: aside1;
+  
+}
+
+#aside1 p {
+  margin-top: 2px;
+}
+
+#aside2{
+  grid-area: aside2;
+}
+
+#aside3{
+  grid-area: aside3;
+}
+
+.about-container {
+  max-width: 84%;
+  margin: auto;
+  display: grid;
+  grid-template-areas: 
+  "photo aside1"
+  ". aside2"
+  ". aside3";
+  grid-template-rows: minmax(250px, auto);
+  gap: 25px;
+  margin-bottom: 10vh;
+}
+
+.carma-photo {
+  justify-self: center;
+  align-self: flex-start;
+  margin-top: 5px;
+  grid-area: 'photo';
+}
+

@@ -1,13 +1,17 @@
 /*----- Clearfix: Force an Element not to collapse -----*/
-.clearfix:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+// .clearfix:after {
+//     content: "";
+//     display: table;
+//     clear: both;
+//   }
 
 // #wrapper {
 //   min-height: 100vh;
 // }
+
+html{
+  overflow-y: scroll;
+}
 
 html, body {
   margin: 0;
@@ -19,6 +23,7 @@ html, body {
 
 
 
+
 /* header */
 
 .header {
@@ -27,12 +32,20 @@ html, body {
   position: fixed;
   width: 100%;
   z-index: 3;
-  margin-bottom: 10vh;
+  
+
+  // margin-bottom: 10vh;
   img {
     width: 12rem;
-    height: auto;
+    // height: auto;
     padding-right: .35rem;
   }
+}
+
+
+.flexer2 {
+  display: flex;
+  justify-content: space-between;
 }
 
 .header ul {
@@ -57,7 +70,7 @@ html, body {
 
 .header .logo {
   display: block;
-  float: left;
+  // float: left;
   font-size: 2em;
   padding-left: 10px;
   text-decoration: none;
@@ -65,25 +78,30 @@ html, body {
   padding-top: .25rem;
   img {
     padding-top: .5rem;
-    // margin-right: 20px;
+    margin-right: 20px;
   }
 }
 
 /* menu */
 
 .header .menu {
-  clear: both;
-  max-height: 0;
+  // clear: both;
+  // max-height: 0;
   transition: max-height .2s ease-out;
 }
 
 /* menu icon */
 
+.menu {
+  display: none;
+}
+
 .header .menu-icon {
   cursor: pointer;
   display: inline-block;
-  float: right;
-  padding: 28px 20px;
+  // float: right;
+  padding: 28px 25px;
+  margin-top: 8px;
   position: relative;
   user-select: none;
 }
@@ -146,16 +164,15 @@ html, body {
 /* 48em = 768px */
 
 @media (min-width: 52em) {
-  .header li {
-    float: left;
+  .header ul {
+    display: flex;
+    justify-content: space-evenly;
   }
   .header li a {
     padding: 20px 30px;
   }
   .header .menu {
-    clear: none;
-    float: right;
-    max-height: none;
+    margin: 0;
   }
   .header .menu-icon {
     display: none;
@@ -224,13 +241,13 @@ html, body {
   h3 {
     text-align: center;
     color: white;
-    font-size: 2rem;
+    font-size: 1.5rem;
     display: block;
     background-color: rgba(0, 100, 0, 0.788);
     position: relative;
     padding-top: 30px;
     padding-bottom: 30px;
-    top: -132px;
+    top: -128px;
   }
 }
 
@@ -238,36 +255,46 @@ footer {
   color: lightgrey;
   background-color: #2E2261;
   font-weight: lighter;
-  padding-top: .1rem;
-  padding-bottom: .1rem;
   text-align: center;
   font-size: .75rem;
+  padding: 1rem 0;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+
+footer p{
+  margin: 0;
 }
 
 .contentwrapper {
   // border: solid red;
-  width: 86%;
+  max-width: 86%;
   margin: 0 auto;
   h1 {
     padding-top: 15vh;
     margin: 0;
   }
-  margin-bottom: 10vh;
+  h2{
+    font-size: 1.2rem;
+  }
+  margin-bottom: 5vh;
 }
 
-#permissionWrapper {
-  margin-bottom: 65vh;
-}
+// #permissionWrapper {
+//   margin-bottom: 65vh;
+// }
 
 //////////////
 .about-container{
   max-width: 84%;
-  margin: auto;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: minmax(250px,auto);
   gap: 10px;
-  margin-bottom: 10vh;
+  margin-bottom: 0 !important;
 }
 
 .carma-photo{
@@ -281,9 +308,11 @@ footer {
   margin: 0;
 }
 
-#bottomFoot
-{
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
+// #bottomFoot
+// {
+//   //position: fixed;
+//   //bottom: 0;
+
+  
+  
+// }

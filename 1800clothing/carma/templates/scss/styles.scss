@@ -1,5 +1,7 @@
 @import "normalize";
 @import "small";
+@import "./components/navbar";
+@import "./components/costumes";
 
 @media only screen and (min-width: 30rem) {
     @import "medium";

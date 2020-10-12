@@ -313,43 +313,9 @@ html, body {
   font-family: 'Nunito Sans', sans-serif;
   background-image: url("../assets/LIghtBg.png"); }
 
-/* index.html  */
-.pageTitle {
-  padding-top: 10vh;
-  text-align: center;
-  font-size: 1.5rem; }
-
-.flexContainer {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  width: 90%;
-  margin: 0 auto;
-  justify-content: center;
-  margin-bottom: 15vh; }
-
-.yearCard {
-  height: 425px;
-  width: 200px;
-  margin: 1%;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.12); }
-  .yearCard a {
-    text-decoration: none;
-    color: white; }
-  .yearCard img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover; }
-  .yearCard h3 {
-    text-align: center;
-    color: white;
-    font-size: 1.5rem;
-    display: block;
-    background-color: rgba(0, 100, 0, 0.788);
-    position: relative;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    top: -128px; }
+.logo {
+  position: relative;
+  margin-top: 4px; }
 
 footer {
   color: lightgrey;
@@ -393,6 +359,45 @@ footer p {
 #test {
   padding-top: 20vh;
   margin: 0; }
+
+.pageTitle {
+  padding-top: 10vh;
+  text-align: center;
+  font-size: 1.5rem; }
+
+.flexContainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 90%;
+  margin: 0 auto;
+  justify-content: center;
+  margin-bottom: 15vh; }
+
+.yearCard {
+  height: 425px;
+  width: 200px;
+  margin: 1%;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.12);
+  position: relative; }
+  .yearCard a {
+    text-decoration: none;
+    color: white; }
+  .yearCard img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
+  .yearCard h3 {
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+    display: block;
+    background-color: rgba(0, 100, 0, 0.788);
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    top: -91px;
+    margin: 0; }
 
 /* header */
 .header {

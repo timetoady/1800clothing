@@ -1,0 +1,46 @@
+.pageTitle {
+  padding-top: 10vh;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.flexContainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 90%;
+  // padding-top: 20vh;
+  margin: 0 auto;
+  justify-content: center;
+  margin-bottom: 15vh;
+}
+
+.yearCard {
+  height: 425px;
+  width: 200px;
+  margin: 1%;  
+  box-shadow: 0 4px 4px rgba(0,0,0,0.12);
+  position: relative;
+
+  a{
+    text-decoration: none;
+    color: white;
+  }
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  h3 {
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+    display: block;
+    background-color: rgba(0, 100, 0, 0.788);
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    top: -91px;
+    margin: 0;
+  }
+}

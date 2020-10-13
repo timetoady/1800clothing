@@ -556,6 +556,9 @@ footer p {
         background-color: white;
         width: 100%; }
 
+header {
+  top: 0; }
+
 @media only screen and (min-width: 30rem) {
   #aside1 {
     grid-area: aside1; }

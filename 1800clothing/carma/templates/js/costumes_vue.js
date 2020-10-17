@@ -20,6 +20,13 @@ const carma_app = new Vue({
         year_to: 0,
         checkedItems: [],
         checked: true,
+        popupCostume: {
+            display: false,
+            caption: 'test',
+            image: 'test',
+            description: 'test',
+            source: 'test'
+        }
     },
     methods: {
         getCostumes() {
@@ -30,6 +37,19 @@ const carma_app = new Vue({
                 .catch(response => {
                     console.log(response);
                 });
+        },
+        setPopup(id) {
+            // caption, clothing, description, id, image, person, source, thumbnail, year_from, _year_to
+            // popupCostume properties: caption, image, description, source
+            console.log(id)
+            this.popupCostume.caption = this.costumes[id - 1].caption
+            this.popupCostume.image = this.costumes[id - 1].image
+            this.popupCostume.description = this.costumes[id - 1].description
+            this.popupCostume.source = this.costumes[id - 1].source
+            this.togglePopup()
+        },
+        togglePopup() {
+            this.popupCostume.display = !this.popupCostume.display
         },
         setPages() {
             let numberOfPages = Math.ceil(this.costumes.length / this.perPage);

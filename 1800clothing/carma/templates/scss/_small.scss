@@ -8,10 +8,15 @@
 // #wrapper {
 //   min-height: 100vh;
 // }
-
-html{
-  overflow-y: scroll;
+ 
+// hides the vue brackets so that they don't show before Vue.js loads
+[v-cloak] {
+  display: none
 }
+
+// html{
+//   overflow-y: scroll;
+// }
 
 html, body {
   margin: 0;

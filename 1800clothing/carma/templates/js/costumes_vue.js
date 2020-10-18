@@ -13,7 +13,7 @@ const carma_app = new Vue({
         costumes: [],
         baseUrl: 'http://www.1800clothing.org/carma/public/costumes',
         page: 1,
-        perPage: 500,
+        perPage: 48,
         pages: [],
         searchInput: '',
         year_from: 0,
@@ -41,11 +41,11 @@ const carma_app = new Vue({
         setPopup(id) {
             // caption, clothing, description, id, image, person, source, thumbnail, year_from, _year_to
             // popupCostume properties: caption, image, description, source
-            console.log(id)
-            this.popupCostume.caption = this.costumes[id - 1].caption
-            this.popupCostume.image = this.costumes[id - 1].image
-            this.popupCostume.description = this.costumes[id - 1].description
-            this.popupCostume.source = this.costumes[id - 1].source
+            let [realItem] = this.costumes.filter(item => item.id === id)
+            this.popupCostume.caption = realItem.caption
+            this.popupCostume.image = realItem.image
+            this.popupCostume.description = realItem.description
+            this.popupCostume.source = realItem.source
             this.togglePopup()
         },
         togglePopup() {

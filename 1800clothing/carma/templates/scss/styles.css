@@ -582,6 +582,17 @@ footer p {
           font-size: 20px;
           padding: 15px;
           margin: 0; }
+    .appGrid .costumeArea JS
+    .pagination {
+      width: 100%;
+      grid-column: 1 / span 2;
+      text-align: center; }
+      .appGrid .costumeArea JS
+      .pagination button {
+        padding: 7px 10px;
+        display: inline-block;
+        margin: 0 3px;
+        cursor: pointer; }
 
 .popup {
   display: fixed;

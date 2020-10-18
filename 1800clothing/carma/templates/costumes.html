@@ -49,47 +49,47 @@
           <!--Radio Buttons-->
           <h5>Search by Decade</h5>
           <div class="decadeRadio">
-            <input @click="yearRangeSearch(1800, 1810)" type="radio"id="customRadio1">
+            <input @click="yearRangeSearch(1800, 1810)" type="radio" id="customRadio1" name="decadeRadio">
             <label for="customRadio1"><b>1800 - 1810</b></label>
           </div>
           <div class="decadeRadio">
-            <input @click="yearRangeSearch(1810, 1820)" type="radio"id="customRadio2">
+            <input @click="yearRangeSearch(1810, 1820)" type="radio" id="customRadio2" name="decadeRadio">
             <label for="customRadio2"><b>1810 - 1820</b></label>
           </div>
           <div class="decadeRadio">
-            <input @click="yearRangeSearch(1820, 1830)" type="radio"id="customRadio3">
+            <input @click="yearRangeSearch(1820, 1830)" type="radio" id="customRadio3" name="decadeRadio">
             <label for="customRadio3"><b>1820 - 1830</b></label>
           </div>
           <div class="decadeRadio">
-            <input @click="yearRangeSearch(1830, 1840)" type="radio"id="customRadio4">
+            <input @click="yearRangeSearch(1830, 1840)" type="radio" id="customRadio4" name="decadeRadio">
             <label for="customRadio4"><b>1830 - 1840</b></label>
           </div>
           <div class="decadeRadio">
-            <input @click="yearRangeSearch(1840, 1850)" type="radio"id="customRadio5">
+            <input @click="yearRangeSearch(1840, 1850)" type="radio" id="customRadio5" name="decadeRadio">
             <label for="customRadio5"><b>1840 - 1850</b></label>
           </div>
           <div class="decadeRadio">
-            <input @click="yearRangeSearch(1850, 1860)" type="radio"id="customRadio6">
+            <input @click="yearRangeSearch(1850, 1860)" type="radio" id="customRadio6" name="decadeRadio">
             <label for="customRadio6"><b>1850 - 1860</b></label>
           </div>
           <div class="decadeRadio">
-            <input @click="yearRangeSearch(1860, 1870)" type="radio"id="customRadio7">
+            <input @click="yearRangeSearch(1860, 1870)" type="radio" id="customRadio7" name="decadeRadio">
             <label for="customRadio7"><b>1860 - 1870</b></label>
           </div>
           <div class="decadeRadio">
-            <input @click="yearRangeSearch(1870, 1880)" type="radio"id="customRadio8">
+            <input @click="yearRangeSearch(1870, 1880)" type="radio" id="customRadio8" name="decadeRadio">
             <label for="customRadio8"><b>1870 - 1880</b></label>
           </div>
           <div class="decadeRadio">
-            <input @click="yearRangeSearch(1880, 1890)" type="radio"id="customRadio9">
+            <input @click="yearRangeSearch(1880, 1890)" type="radio" id="customRadio9" name="decadeRadio">
             <label for="customRadio9"><b>1880 - 1890</b></label>
           </div>
           <div class="decadeRadio">
-            <input @click="yearRangeSearch(1890, 1900)" type="radio"id="customRadio10">
+            <input @click="yearRangeSearch(1890, 1900)" type="radio" id="customRadio10" name="decadeRadio">
             <label for="customRadio10"><b>1890 - 1900</b></label>
           </div>
           <div class="decadeRadio">
-            <input @click="getAllCostumes()" type="radio"id="customRadio11">
+            <input @click="getAllCostumes()" type="radio" id="customRadio11" name="decadeRadio">
             <label for="customRadio11"><b>Show all from 1800 to 1900</b></label>
           </div>
 
@@ -128,33 +128,31 @@
             caption, clothing, description, id, image, person, source, thumbnail, year_from, _year_to
           -->
           <div class="costumeArea">
-          <div class="costumes" v-for="costume in displayedCostumes" v-cloak>
-            <div class="costumeCard" v-on:click="setPopup(costume.id)">
-              <div class="card-body thumbnail" data-toggle="modal" v-bind:data-target="'#' + costume.id">
-                <img class="cardImg" v-bind:src=" '/carma/assets/thumbnails/' + costume.thumbnail" alt="Card image cap" data-toggle="modal" v-bind:data-target="'#' + costume.id">
-                <!-- PREVIOUS CODE: <h5 class="capitalize"><span style="text-transform: capitalize;">{{costume.person}}</span> clothing from {{costume.year_from}} to {{costume.year_to}}</h5> -->
-                <h5 class="cardText">{{costume.caption}}</h5>
-                <!--Buttons for Admin Mode-->
-                <!--<p class="card-text">{{post.description}}...</p>-->
-                <!--<div class="d-flex justify-content-between align-items-center">-->
-                <!--    <div class="btn-group">-->
-                <!--   <button type="button" class="btn btn-sm btn-outline-secondary">View</button>-->
-                <!--<button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
-                <!--    </div>-->
+            <div class="costumes" v-for="costume in displayedCostumes" v-cloak>
+              <div class="costumeCard" v-on:click="setPopup(costume.id)">
+                <div class="card-body thumbnail" data-toggle="modal" v-bind:data-target="'#' + costume.id">
+                  <img class="cardImg" v-bind:src=" '/carma/assets/thumbnails/' + costume.thumbnail" alt="Card image cap" data-toggle="modal" v-bind:data-target="'#' + costume.id">
+                  <!-- PREVIOUS CODE: <h5 class="capitalize"><span style="text-transform: capitalize;">{{costume.person}}</span> clothing from {{costume.year_from}} to {{costume.year_to}}</h5> -->
+                  <h5 class="cardText">{{costume.caption}}</h5>
+                  <!--Buttons for Admin Mode-->
+                  <!--<p class="card-text">{{post.description}}...</p>-->
+                  <!--<div class="d-flex justify-content-between align-items-center">-->
+                  <!--    <div class="btn-group">-->
+                  <!--   <button type="button" class="btn btn-sm btn-outline-secondary">View</button>-->
+                  <!--<button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                  <!--    </div>-->
 
+                </div>
               </div>
             </div>
-          </div>
+
+          <ul class="pagination">
+            <button type="button" class="paginationNextPrev" v-if="page != 1" @click="page--">Previous</button>
+            <button type="button" class="paginationBtn" v-for="pageNumber in pages.slice(page-1, page+5)" @click="page = pageNumber">{{pageNumber}}</button>
+            <button type="button" @click="page++" v-if="page < pages.length" class="paginationNextPrev">Next</button>
+          </ul>
         </div>
       </div>
-
-      <ul class="pagination pagination-lg">
-      <div class="clearfix btn-group col-md-6 offset-md-5">
-        <button type="button" class="btn btn-sm btn-outline-secondary page-link" v-if="page != 1" @click="page--"> Previous  </button>
-        <button type="button" class="btn btn-sm btn-outline-secondary page-link" v-for="pageNumber in pages.slice(page-1, page+5)" @click="page = pageNumber"> {{pageNumber}} </button>
-        <button type="button" @click="page++" v-if="page < pages.length" class="btn btn-sm btn-outline-secondary page-link"> Next </button>
-      </div>
-      </ul>
 
       <!-- Popup Box -->
       <div class="popup" tabindex="-1" v-if="popupCostume.display" v-cloak>
@@ -190,7 +188,9 @@
   <!-- Placed at the end of the document so the pages load faster -->
   <script src="js/jquery.min.js"></script>
   <script src="js/popper.min.js"></script>
+  <!--
   <script src="js/bootstrap.min.js"></script>
+  -->
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
   <!--Activate for deployment-->

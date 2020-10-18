@@ -94,6 +94,25 @@
                 }
             }
         }
+JS
+        .pagination {
+            width: 100%;
+            grid-column: 1 / span 2;
+            text-align: center;
+
+            button {
+                padding: 7px 10px;
+                display: inline-block;
+                margin: 0 3px;
+                cursor: pointer;
+            }
+            .paginationNextPrev {
+
+            }
+            .paginationBtn {
+
+            }
+        }
     }
 }
 

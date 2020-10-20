@@ -13,13 +13,20 @@ const carma_app = new Vue({
         costumes: [],
         baseUrl: 'http://www.1800clothing.org/carma/public/costumes',
         page: 1,
-        perPage: 500,
+        perPage: 48,
         pages: [],
         searchInput: '',
         year_from: 0,
         year_to: 0,
         checkedItems: [],
         checked: true,
+        popupCostume: {
+            display: false,
+            caption: 'test',
+            image: 'test',
+            description: 'test',
+            source: 'test'
+        }
     },
     methods: {
         getCostumes() {
@@ -30,6 +37,19 @@ const carma_app = new Vue({
                 .catch(response => {
                     console.log(response);
                 });
+        },
+        setPopup(id) {
+            // caption, clothing, description, id, image, person, source, thumbnail, year_from, _year_to
+            // popupCostume properties: caption, image, description, source
+            let [realItem] = this.costumes.filter(item => item.id === id)
+            this.popupCostume.caption = realItem.caption
+            this.popupCostume.image = realItem.image
+            this.popupCostume.description = realItem.description
+            this.popupCostume.source = realItem.source
+            this.togglePopup()
+        },
+        togglePopup() {
+            this.popupCostume.display = !this.popupCostume.display
         },
         setPages() {
             let numberOfPages = Math.ceil(this.costumes.length / this.perPage);

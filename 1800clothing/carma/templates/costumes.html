@@ -10,7 +10,8 @@
   <title>Costumes</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="./css/bootstrap.min.css" rel="stylesheet">
+  <!-- REMOVED because it's messing with the styling for the nav bar and it's bad for organization
+    <link href="./css/bootstrap.min.css" rel="stylesheet"> -->
 
   <!-- Custom styles for this template -->
   <!--<link href="dist/css/pagination-style.css" rel="stylesheet">-->
@@ -18,373 +19,167 @@
   <link href="./css/offcanvas.css" rel="stylesheet">
   <link href="./scss/styles.css" rel="stylesheet">
   <script src="./js/modernizr.custom.js"></script>
-
-  <style type="text/css">
-    .thumbnail img {
-      max-width: 210px;
-      /*max-width: 140px;*/
-      max-height: 230px;
-    }
-
-    .bg {
-      /* Full height */
-      height: 100%;
-
-      /* Center and scale the image nicely */
-      background-position: center;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-    }
-
-    .category {
-      position: relative;
-      /*left: 10%;*/
-    }
-
-    .nav-link.active {
-      color: #46AE49!important;
-    }
-
-    .jumbotron {
-      background: rgb(46, 34, 98);
-      background: linear-gradient(180deg, rgba(46, 34, 98, 1) 0%, rgba(89, 32, 96, 1) 100%);
-      border-radius: 0rem;
-    }
-
-    .jumbotron1 {
-      background: rgb(46, 34, 98);
-      background: linear-gradient(0deg, rgba(46, 34, 98, 1) 0%, rgba(89, 32, 96, 1) 100%);
-      border-radius: 0rem;
-      padding-top: 10px;
-      padding-bottom: 10px;
-      color: #fff;
-      height: 140px;
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      margin-top: -150px; /* negative value of footer height */
-      /*height: 150px;*/
-      clear:both;
-    }
-html, body {
-  height: 100%;
-}    
-footer{
-  position: fixed;
-}
-    .jumbotron-heading {
-      color: #ffffff;
-      font-family: 'Raleway', sans-serif;
-      font-weight: bold;
-      font-size: 24px;
-    }
-
-    .nav-item {
-      font-size: 24px;
-    }
-
-    .smallText {
-      font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
-      font-size: 22px;
-      line-height: 22px;
-      font-weight: normal;
-    }
-
-    .jumbotron {
-      padding: 1rem 2rem;
-      margin-bottom: 0rem;
-    }
-
-    .bg-dark {
-      background-color: #2e2262 !important;
-    }
-
-    .btn-outline-success {
-      color: #ffffff;
-      background-color: #46ad00;
-      background-image: none;
-      border-color: #28a745;
-    }
-
-    .btn-success {
-      background-color: #46ad00;
-      border-radius: 0px;
-      width: 100%;
-      height: 100%;
-    }
-
-    /*Card Background Color*/
-    /*.card-body {*/
-    /*  background-color: #F8F8F8;*/
-    /*}*/
-    /*Card Background Color and Transparency*/
-    .card {
-      background-color: rgba(245, 245, 245, 0.8);
-    }
-
-    .card-header,
-    .card-footer {
-      opacity: 1
-    }
-
-    .btn-link {
-      text-transform: none;
-      color: white;
-      font-size: 20px;
-    }
-
-    .launchBtn {
-      margin-top: 18px;
-    }
-
-    .image {
-      position: relative;
-      margin-bottom: 0px;
-      width: 100%;
-    }
-
-    .image h2 {
-      position: absolute;
-      top: 225px;
-      left: 0;
-      width: 100%;
-    }
-
-    .image h2 span {
-      color: white;
-      font: bold 24px/45px Helvetica, Sans-Serif;
-      letter-spacing: -1px;
-      background: #46ad00;
-      background: rgba(70, 173, 0, 0.7);
-      padding: 12px 50px;
-      font-size: 24px;
-    }
-
-    .pb-5,
-    .py-5 {
-      /*padding-bottom: 0rem !important;*/
-      padding-top: 1.8rem !important;
-    }
-
-    .col-md-2-5 {
-      width: 100%;
-      height: 100%;
-      margin-right: 15px;
-    }
-    .bg-lighter {
-      background-color: transparent !important;
-    }
-    
-/*footer fix?    */
-.carma {
-  overflow:auto;
-  padding-bottom:150px; /* this needs to be bigger than footer height*/
-}
-  </style>
-
-
-
 </head>
 
 
 <body>
-  <div class="page-container">
-  
-    <header class="header">
-      <div class="flexer2">
+  <header class="header">
+    <div class="flexer2">
       <a href="./index.html" class="logo"><img src="./assets/hatlogo.png"></a>
       <input class="menu-btn" type="checkbox" id="menu-btn" />
       <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
-
-  </div>
-      <ul class="menu">
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="./costumes.html">Costumes</a></li>
-          <li><a href="./about.html">About</a></li>
-          <li><a href="./contact.html">Contact</a></li>
-          <li><a href="./permissions.html">Permissions</a></li>
-  </div>
-  </header>
-
-    <!-- <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark ml-auto">
-    <span><a class="navbar-brand" href="aboutus.html"><img src="images/carmaPhoto.jpg" alt="" /></a></span><span class="jumbotron-heading">1800's Clothing</span>
-    <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-    <div class="navbar-collapse offcanvas-collapse justify-content-between" id="navbarsExampleDefault">
-      <ul class="navbar-nav mr-auto text-hide">
-      </ul>
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="http://www.1800clothing.org">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="costumes.html">Costumes</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="aboutus.html">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contactus.html">Contact Us</a>
-        </li>
-      </ul>
     </div>
-  </nav> -->
+
+    <ul class="menu">
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./costumes.html">Costumes</a></li>
+      <li><a href="./about.html">About</a></li>
+      <li><a href="./contact.html">Contact</a></li>
+      <li><a href="./permissions.html">Permissions</a></li>
+    </ul>
+  </header>
 
   <main role="main" id="carma-app" class ="carma">
 
-    <!--<h1 class="text-center">1800's Costumes - All costumes GET Call</h1>-->
-    <!--Added background in the next line -->
-    <div class="album py-5 bg-light bg">
+      <div class="appGrid">
+        <div class="searchArea">
+          <span class="fa fa-search form-control-feedback"></span>
+          <input type="text" v-model="searchInput" class="form-control" placeholder="Search">
 
-      <div class="container-fluid" v-cloak style="padding-top: 20px;">
-        <div class="row">
-          <div class="col">
-            <div class="row">
-              <div class="col-lg-2">
-                <div class="form-group has-search">
-                  <span class="fa fa-search form-control-feedback"></span>
-                  <input type="text" v-model="searchInput" class="form-control" placeholder="Search">
-
-                  <!--Radio Buttons-->
-                  <h5>Search by Decade</h5>
-                  <div class="custom-control custom-radio custom-control-inline">
-                    <input @click="yearRangeSearch(1800, 1810)" type="radio" class="custom-control-input" id="customRadio1" name="example">
-                    <label class="custom-control-label" for="customRadio1"><b>1800 - 1810</b></label>
-                  </div>
-                  <div class="custom-control custom-radio custom-control-inline">
-                    <input @click="yearRangeSearch(1810, 1820)" type="radio" class="custom-control-input" id="customRadio2" name="example">
-                    <label class="custom-control-label" for="customRadio2"><b>1810 - 1820</b></label>
-                  </div>
-                  <div class="custom-control custom-radio custom-control-inline">
-                    <input @click="yearRangeSearch(1820, 1830)" type="radio" class="custom-control-input" id="customRadio3" name="example">
-                    <label class="custom-control-label" for="customRadio3"><b>1820 - 1830</b></label>
-                  </div>
-                  <div class="custom-control custom-radio custom-control-inline">
-                    <input @click="yearRangeSearch(1830, 1840)" type="radio" class="custom-control-input" id="customRadio4" name="example">
-                    <label class="custom-control-label" for="customRadio4"><b>1830 - 1840</b></label>
-                  </div>
-                  <div class="custom-control custom-radio custom-control-inline">
-                    <input @click="yearRangeSearch(1840, 1850)" type="radio" class="custom-control-input" id="customRadio5" name="example">
-                    <label class="custom-control-label" for="customRadio5"><b>1840 - 1850</b></label>
-                  </div>
-                  <div class="custom-control custom-radio custom-control-inline">
-                    <input @click="yearRangeSearch(1850, 1860)" type="radio" class="custom-control-input" id="customRadio6" name="example">
-                    <label class="custom-control-label" for="customRadio6"><b>1850 - 1860</b></label>
-                  </div>
-                  <div class="custom-control custom-radio custom-control-inline">
-                    <input @click="yearRangeSearch(1860, 1870)" type="radio" class="custom-control-input" id="customRadio7" name="example">
-                    <label class="custom-control-label" for="customRadio7"><b>1860 - 1870</b></label>
-                  </div>
-                  <div class="custom-control custom-radio custom-control-inline">
-                    <input @click="yearRangeSearch(1870, 1880)" type="radio" class="custom-control-input" id="customRadio8" name="example">
-                    <label class="custom-control-label" for="customRadio8"><b>1870 - 1880</b></label>
-                  </div>
-                  <div class="custom-control custom-radio custom-control-inline">
-                    <input @click="yearRangeSearch(1880, 1890)" type="radio" class="custom-control-input" id="customRadio9" name="example">
-                    <label class="custom-control-label" for="customRadio9"><b>1880 - 1890</b></label>
-                  </div>
-                  <div class="custom-control custom-radio custom-control-inline">
-                    <input @click="yearRangeSearch(1890, 1900)" type="radio" class="custom-control-input" id="customRadio10" name="example">
-                    <label class="custom-control-label" for="customRadio10"><b>1890 - 1900</b></label>
-                  </div>
-                  <div class="custom-control custom-radio custom-control-inline">
-                    <input @click="getAllCostumes()" type="radio" class="custom-control-input" id="customRadio11" name="example">
-                    <label class="custom-control-label" for="customRadio11"><b>Show all from 1800 to 1900</b></label>
-                  </div>
+          <!--Radio Buttons-->
+          <h5>Search by Decade</h5>
+          <div class="decadeRadio">
+            <input @click="yearRangeSearch(1800, 1810)" type="radio" id="customRadio1" name="decadeRadio">
+            <label for="customRadio1"><b>1800 - 1810</b></label>
+          </div>
+          <div class="decadeRadio">
+            <input @click="yearRangeSearch(1810, 1820)" type="radio" id="customRadio2" name="decadeRadio">
+            <label for="customRadio2"><b>1810 - 1820</b></label>
+          </div>
+          <div class="decadeRadio">
+            <input @click="yearRangeSearch(1820, 1830)" type="radio" id="customRadio3" name="decadeRadio">
+            <label for="customRadio3"><b>1820 - 1830</b></label>
+          </div>
+          <div class="decadeRadio">
+            <input @click="yearRangeSearch(1830, 1840)" type="radio" id="customRadio4" name="decadeRadio">
+            <label for="customRadio4"><b>1830 - 1840</b></label>
+          </div>
+          <div class="decadeRadio">
+            <input @click="yearRangeSearch(1840, 1850)" type="radio" id="customRadio5" name="decadeRadio">
+            <label for="customRadio5"><b>1840 - 1850</b></label>
+          </div>
+          <div class="decadeRadio">
+            <input @click="yearRangeSearch(1850, 1860)" type="radio" id="customRadio6" name="decadeRadio">
+            <label for="customRadio6"><b>1850 - 1860</b></label>
+          </div>
+          <div class="decadeRadio">
+            <input @click="yearRangeSearch(1860, 1870)" type="radio" id="customRadio7" name="decadeRadio">
+            <label for="customRadio7"><b>1860 - 1870</b></label>
+          </div>
+          <div class="decadeRadio">
+            <input @click="yearRangeSearch(1870, 1880)" type="radio" id="customRadio8" name="decadeRadio">
+            <label for="customRadio8"><b>1870 - 1880</b></label>
+          </div>
+          <div class="decadeRadio">
+            <input @click="yearRangeSearch(1880, 1890)" type="radio" id="customRadio9" name="decadeRadio">
+            <label for="customRadio9"><b>1880 - 1890</b></label>
+          </div>
+          <div class="decadeRadio">
+            <input @click="yearRangeSearch(1890, 1900)" type="radio" id="customRadio10" name="decadeRadio">
+            <label for="customRadio10"><b>1890 - 1900</b></label>
+          </div>
+          <div class="decadeRadio">
+            <input @click="getAllCostumes()" type="radio" id="customRadio11" name="decadeRadio">
+            <label for="customRadio11"><b>Show all from 1800 to 1900</b></label>
+          </div>
 
 
-                  <!--Checkbox Buttons-->
-                  <h5>Filter by Person</h5>
-                  <div class="form-check">
-                    <input @click="checkMark()" class="form-check-input" type="checkbox" value="family" v-model="checkedItems" id="family" vchecked>
-                    <label class="form-check-label" for="defaultCheck1">
-                      <b>Family</b>
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="women" v-model="checkedItems" id="women">
-                    <label class="form-check-label" for="defaultCheck2">
-                     <b>Women</b>
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="men" v-model="checkedItems" id="men">
-                    <label class="form-check-label" for="defaultCheck3">
-                      <b>Men</b>
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="child" v-model="checkedItems" id="child">
-                    <label class="form-check-label" for="defaultCheck4">
-                      <b>Child</b>
-                    </label>
-                  </div>
+            <!--Checkbox Buttons-->
+            <h5>Filter by Person</h5>
+            <div class="filterCheck">
+              <input @click="checkMark()" type="checkbox" value="family" v-model="checkedItems" id="family" vchecked>
+              <label for="defaultCheck1">
+                <b>Family</b>
+              </label>
+            </div>
+            <div class="filterCheck">
+              <input type="checkbox" value="women" v-model="checkedItems" id="women">
+              <label for="defaultCheck2">
+                <b>Women</b>
+              </label>
+            </div>
+            <div class="filterCheck">
+              <input type="checkbox" value="men" v-model="checkedItems" id="men">
+              <label for="defaultCheck3">
+                <b>Men</b>
+              </label>
+            </div>
+            <div class="filterCheck">
+              <input type="checkbox" value="child" v-model="checkedItems" id="child">
+              <label for="defaultCheck4">
+                <b>Child</b>
+              </label>
+            </div>
+
+          </div>
+
+          <!-- Costume boxes -->
+          <!-- 
+            caption, clothing, description, id, image, person, source, thumbnail, year_from, _year_to
+          -->
+          <div class="costumeArea">
+            <div class="costumes" v-for="costume in displayedCostumes" v-cloak>
+              <div class="costumeCard" v-on:click="setPopup(costume.id)">
+                <div class="card-body thumbnail" data-toggle="modal" v-bind:data-target="'#' + costume.id">
+                  <img class="cardImg" v-bind:src=" '/carma/assets/thumbnails/' + costume.thumbnail" alt="Card image cap" data-toggle="modal" v-bind:data-target="'#' + costume.id">
+                  <!-- PREVIOUS CODE: <h5 class="capitalize"><span style="text-transform: capitalize;">{{costume.person}}</span> clothing from {{costume.year_from}} to {{costume.year_to}}</h5> -->
+                  <h5 class="cardText">{{costume.caption}}</h5>
+                  <!--Buttons for Admin Mode-->
+                  <!--<p class="card-text">{{post.description}}...</p>-->
+                  <!--<div class="d-flex justify-content-between align-items-center">-->
+                  <!--    <div class="btn-group">-->
+                  <!--   <button type="button" class="btn btn-sm btn-outline-secondary">View</button>-->
+                  <!--<button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                  <!--    </div>-->
 
                 </div>
               </div>
-              <div class="col-lg-8">
-                <div class="row">
-                  <div class="col-lg-4 mx-auto text-center" v-for="costume in displayedCostumes" >
-                    <div class="card mb-4 box-shadow post-cards card-img-top">
-                      <div class="card-body thumbnail" style="cursor: pointer;" data-toggle="modal" v-bind:data-target="'#' + costume.id">
-                        <img style="cursor: pointer; padding-bottom: 15px;" class="img-responsive" v-bind:src=" '/carma/assets/thumbnails/' + costume.thumbnail" alt="Card image cap" data-toggle="modal" v-bind:data-target="'#' + costume.id" class=" img-responsive">
-                        <h5 class="capitalize"><span style="text-transform: capitalize;">{{costume.person}}</span> clothing from {{costume.year_from}} to {{costume.year_to}}</h5>
-                        <!--Buttons for Admin Mode-->
-                        <!--<p class="card-text">{{post.description}}...</p>-->
-                        <!--<div class="d-flex justify-content-between align-items-center">-->
-                        <!--    <div class="btn-group">-->
-                        <!--   <button type="button" class="btn btn-sm btn-outline-secondary">View</button>-->
-                        <!--<button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
-                        <!--    </div>-->
+            </div>
 
-                      </div>
-                      <!--Modal-->
-                      <div class="modal fade bd-example-modal-xl" v-bind:id="costume.id" tabindex="-1" role="dialog" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                          <div class="modal-content">
-                            <div class="modal-header" style="text-align: left;">
-                              <h5 class="modal-title" id="exampleModalLabel">{{costume.caption}}</h5>
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                  <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                              <img style="cursor: pointer;" class="img-fluid" v-bind:src=" '/carma/assets/images/' + costume.image" alt="Card image cap" target="_blank">
-                              <div><a v-bind:href=" '/carma/assets/images/' + costume.image" target="_blank">Open Full Size Image</a></div>
-                            </div>
-                            <div class="modal-footer" style="text-align: left;">
-                              <div class="row">
-                                <div class="col-lg-12 mx-auto"><b>Description:</b> {{costume.description}}</div>
-                                <div class="col-lg-12 mx-auto"><b>Source:</b> {{costume.source}}</div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          <ul class="pagination">
+            <button type="button" class="paginationNextPrev" v-if="page != 1" @click="page--">Previous</button>
+            <button type="button" class="paginationBtn" v-for="pageNumber in pages.slice(page-1, page+5)" @click="page = pageNumber">{{pageNumber}}</button>
+            <button type="button" @click="page++" v-if="page < pages.length" class="paginationNextPrev">Next</button>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Popup Box -->
+      <div class="popup" tabindex="-1" v-if="popupCostume.display" v-cloak>
+        <div class="popupContent">
+          <div class="popupHeader">
+            <button v-on:click="togglePopup" class="closeButton" title="Close">
+              <span>&times;</span>
+            </button>
+            <h5>{{popupCostume.caption}}</h5>
+          </div>
+          <div class="popupGrid">
+            <div class="fullsize">
+              <img v-bind:src=" '/carma/assets/images/' + popupCostume.image" alt="Card image" target="_blank">
+              <div class="fullsizeLink"><a v-bind:href=" '/carma/assets/images/' + popupCostume.image" target="_blank">Open Full Size Image</a></div>
+            </div>
+            <div class="popupFooter">
+                <div class="popupFooterDesc"><b>Description:</b> {{popupCostume.description}}</div>
+                <div class="popupFooterSource"><b>Source:</b> {{popupCostume.source}}</div>
             </div>
           </div>
         </div>
       </div>
 
-      <ul class="pagination pagination-lg">
-      <div class="clearfix btn-group col-md-6 offset-md-5">
-        <button type="button" class="btn btn-sm btn-outline-secondary page-link" v-if="page != 1" @click="page--"> Previous  </button>
-        <button type="button" class="btn btn-sm btn-outline-secondary page-link" v-for="pageNumber in pages.slice(page-1, page+5)" @click="page = pageNumber"> {{pageNumber}} </button>
-        <button type="button" @click="page++" v-if="page < pages.length" class="btn btn-sm btn-outline-secondary page-link"> Next </button>
-      </div>
-      </ul>
-
       
       <footer>
         <p>1800Clothing.org &copy; 2018-2019</p>
-</footer>
-    </div>
+      </footer>
 
   </main>
 
@@ -393,7 +188,9 @@ footer{
   <!-- Placed at the end of the document so the pages load faster -->
   <script src="js/jquery.min.js"></script>
   <script src="js/popper.min.js"></script>
+  <!--
   <script src="js/bootstrap.min.js"></script>
+  -->
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
   <!--Activate for deployment-->

@@ -304,14 +304,100 @@ template {
   display: none; }
 
 /*----- Clearfix: Force an Element not to collapse -----*/
-html {
-  overflow-y: scroll; }
+[v-cloak] {
+  display: none; }
 
 html, body {
   margin: 0;
   height: 100%;
   font-family: 'Nunito Sans', sans-serif;
   background-image: url("../assets/LIghtBg.png"); }
+
+.logo {
+  position: relative;
+  margin-top: 4px; }
+
+footer {
+  color: lightgrey;
+  background-color: #2E2261;
+  font-weight: lighter;
+  text-align: center;
+  font-size: .75rem;
+  padding: 1rem 0;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0; }
+
+footer p {
+  margin: 0; }
+
+.contentwrapper {
+  max-width: 86%;
+  margin: 0 auto;
+  margin-bottom: 5vh; }
+  .contentwrapper h1 {
+    padding-top: 15vh;
+    margin: 0; }
+  .contentwrapper h2 {
+    font-size: 1.2rem; }
+
+.about-container {
+  max-width: 84%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: minmax(250px, auto);
+  gap: 10px;
+  margin-bottom: 0 !important; }
+
+.carma-photo {
+  justify-self: center;
+  align-self: center;
+  margin-top: 5px; }
+
+#test {
+  padding-top: 20vh;
+  margin: 0; }
+
+.pageTitle {
+  padding-top: 10vh;
+  text-align: center;
+  font-size: 1.5rem; }
+
+.flexContainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 90%;
+  margin: 0 auto;
+  justify-content: center;
+  margin-bottom: 15vh; }
+
+.yearCard {
+  height: 425px;
+  width: 200px;
+  margin: 1%;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.12);
+  position: relative; }
+  .yearCard a {
+    text-decoration: none;
+    color: white; }
+  .yearCard img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
+  .yearCard h3 {
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+    display: block;
+    background-color: rgba(0, 100, 0, 0.788);
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    top: -91px;
+    margin: 0; }
 
 /* header */
 .header {
@@ -434,103 +520,173 @@ html, body {
   max-height: 40px;
   width: auto; }
 
-#companyInfo {
-  display: flex;
-  white-space: nowrap; }
-
-#homeLink {
-  text-decoration: none;
-  color: white; }
-
-#companyInfo:hover {
-  cursor: pointer; }
-
-#companyInfo h2 {
-  padding-left: 20px;
-  font-weight: 300; }
-
-#companyInfo img {
-  margin-top: 13px; }
-
-.pageTitle {
-  padding-top: 10vh;
-  text-align: center;
-  font-size: 1.5rem; }
-
-.flexContainer {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  width: 90%;
-  margin: 0 auto;
-  justify-content: center;
-  margin-bottom: 15vh; }
-
-.yearCard {
-  height: 425px;
-  width: 200px;
-  margin: 1%;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.12); }
-  .yearCard a {
-    text-decoration: none;
-    color: white; }
-  .yearCard img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover; }
-  .yearCard h3 {
-    text-align: center;
-    color: white;
-    font-size: 1.5rem;
-    display: block;
-    background-color: rgba(0, 100, 0, 0.788);
-    position: relative;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    top: -128px; }
-
-footer {
-  color: lightgrey;
-  background-color: #2E2261;
-  font-weight: lighter;
-  text-align: center;
-  font-size: .75rem;
-  padding: 1rem 0;
-  width: 100%;
-  position: fixed;
-  left: 0;
-  bottom: 0; }
-
-footer p {
-  margin: 0; }
-
-.contentwrapper {
-  max-width: 86%;
-  margin: 0 auto;
-  margin-bottom: 5vh; }
-  .contentwrapper h1 {
-    padding-top: 15vh;
-    margin: 0; }
-  .contentwrapper h2 {
-    font-size: 1.2rem; }
-
-.about-container {
-  max-width: 84%;
-  margin: 0 auto;
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@keyframes fadeInMoveUp {
+  from {
+    opacity: 0;
+    margin-top: 50px; }
+  to {
+    opacity: 1;
+    margin-top: 0; } }
+.appGrid {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: minmax(250px, auto);
-  gap: 10px;
-  margin-bottom: 0 !important; }
+  grid-template-columns: 250px 1fr;
+  padding-top: 58px; }
+  .appGrid .searchArea {
+    padding: 20px;
+    padding-right: 0; }
+    .appGrid .searchArea input[type="text"] {
+      padding: 8px;
+      border: 1px solid grey;
+      border-radius: 5px; }
+    .appGrid .searchArea h5 {
+      font-size: 23px;
+      margin: 10px 0; }
+    .appGrid .searchArea .decadeRadio {
+      font-size: 15px;
+      padding: 4px 0;
+      padding-top: 0; }
+    .appGrid .searchArea .filterCheck {
+      font-size: 15px;
+      padding: 4px 0;
+      padding-top: 0; }
+  .appGrid .costumeArea {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    margin: 0 auto;
+    padding-right: 20px;
+    max-width: 1500px; }
+    .appGrid .costumeArea .costumes .costumeCard {
+      margin: 5px;
+      background-color: white;
+      border-radius: 10px;
+      border: 1px solid rgba(199, 199, 199, 0.089);
+      -webkit-box-shadow: 10px 10px 31px -23px rgba(0, 0, 0, 0.43);
+      -moz-box-shadow: 10px 10px 31px -23px rgba(0, 0, 0, 0.43);
+      box-shadow: 10px 10px 31px -23px rgba(0, 0, 0, 0.43);
+      cursor: pointer; }
+      .appGrid .costumeArea .costumes .costumeCard .card-body {
+        text-align: center;
+        padding: 15px; }
+        .appGrid .costumeArea .costumes .costumeCard .card-body .cardImg {
+          max-width: 200px;
+          max-height: 200px;
+          border-radius: 5px; }
+        .appGrid .costumeArea .costumes .costumeCard .card-body h5 {
+          font-weight: normal;
+          font-size: 20px;
+          padding: 15px;
+          margin: 0; }
+    .appGrid .costumeArea JS
+    .pagination {
+      width: 100%;
+      grid-column: 1 / span 2;
+      text-align: center; }
+      .appGrid .costumeArea JS
+      .pagination button {
+        padding: 7px 10px;
+        display: inline-block;
+        margin: 0 3px;
+        cursor: pointer; }
 
-.carma-photo {
-  justify-self: center;
-  align-self: center;
-  margin-top: 5px; }
+.popup {
+  display: fixed;
+  position: absolute;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  overflow-y: scroll;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.61);
+  animation-name: fadeIn;
+  animation-duration: 0.3s; }
+  .popup .popupContent {
+    opacity: 0;
+    background-color: white;
+    width: 1000px;
+    border-radius: 10px;
+    padding: 30px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 auto;
+    animation-name: fadeInMoveUp;
+    animation-delay: 0.1s;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards; }
+    .popup .popupContent .popupHeader {
+      position: relative; }
+      .popup .popupContent .popupHeader h5 {
+        margin: 0;
+        font-size: 30px;
+        padding-bottom: 30px;
+        padding-right: 30px; }
+      .popup .popupContent .popupHeader .closeButton {
+        position: absolute;
+        right: 0;
+        cursor: pointer; }
+    .popup .popupContent .popupGrid {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      grid-gap: 20px; }
+      .popup .popupContent .popupGrid .fullsize img {
+        max-width: 400px;
+        max-height: 500px;
+        border-radius: 10px; }
+      .popup .popupContent .popupGrid .fullsize .fullsizeLink {
+        padding-top: 20px; }
+      .popup .popupContent .popupGrid .popupFooter {
+        font-size: 17x;
+        line-height: 1.2; }
+        .popup .popupContent .popupGrid .popupFooter div {
+          padding-bottom: 20px; }
 
-#test {
-  padding-top: 20vh;
-  margin: 0; }
+@media only screen and (max-width: 1465px) {
+  .appGrid .costumeArea {
+    grid-template-columns: 1fr 1fr 1fr; } }
+@media only screen and (max-width: 1211px) {
+  .appGrid .costumeArea {
+    grid-template-columns: 1fr 1fr; }
+
+  .popup .popupContent {
+    width: 800px; }
+    .popup .popupContent .popupHeader h5 {
+      font-size: 25px; }
+    .popup .popupContent .popupGrid .fullsize img {
+      max-width: 250px; } }
+@media only screen and (max-width: 927px) {
+  .appGrid .costumeArea {
+    grid-template-columns: 1fr; }
+
+  .popup .popupContent {
+    width: auto;
+    margin: 20px; }
+    .popup .popupContent .popupHeader h5 {
+      font-size: 20px; }
+    .popup .popupContent .popupGrid .fullsize img {
+      max-width: 200px; } }
+@media only screen and (max-width: 593px) {
+  .appGrid {
+    grid-template-columns: 1fr; }
+    .appGrid .costumeArea {
+      padding: 10px; }
+
+  .popup .popupContent {
+    width: auto;
+    margin: 20px; }
+    .popup .popupContent .popupHeader h5 {
+      font-size: 20px; }
+    .popup .popupContent .popupGrid {
+      grid-template-columns: 1fr; } }
+header {
+  top: 0; }
 
 @media only screen and (min-width: 30rem) {
   #aside1 {

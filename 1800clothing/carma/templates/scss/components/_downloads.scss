@@ -1,3 +1,59 @@
+$navColor: #2E2260;
+
 header {
     top: 0;
+}
+
+.downloadsBody {
+    text-align: center;
+    padding-top: 58px;
+
+    h1 {
+        font-weight: bold;
+        margin: 0;
+        padding: 30px;
+        font-size: 50px;
+    }
+
+    p {
+        margin: 0;
+        padding: 30px;
+        padding-top: 0;
+        font-size: 30px;
+    }
+    
+    .downloadLinks {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+        max-width: 500px;
+        margin: 0 auto;
+
+        a {
+            text-decoration: none;
+
+            .downloadBtn {
+                color: white;
+                background-color: $navColor;
+                padding: 15px;
+                font-size: 28px;
+                border-radius: 10px;
+                box-shadow: 4px 4px 13px 3px rgba(0,0,0,0.13);
+                transition: 0.3s;
+            }
+            .downloadBtn:hover {
+                background-color: lighten($navColor, 13%);
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 593px) {
+    .downloadsBody .downloadLinks {
+        grid-template-columns: 1fr;
+        
+        a {
+            margin: 0 30px;
+        }
+    }
 }

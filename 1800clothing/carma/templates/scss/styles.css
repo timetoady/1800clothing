@@ -439,7 +439,6 @@ footer p {
   color: white;
   padding-top: .25rem; }
   .header .logo img {
-    padding-top: .5rem;
     margin-right: 20px; }
 
 /* menu */
@@ -454,7 +453,6 @@ footer p {
   cursor: pointer;
   display: inline-block;
   padding: 28px 25px;
-  margin-top: 8px;
   position: relative;
   user-select: none; }
 
@@ -503,16 +501,10 @@ footer p {
   top: 0; }
 
 /* 48em = 768px */
-@media (min-width: 52em) {
+@media (min-width: 960px) {
   .header ul {
     display: flex;
     justify-content: space-evenly; }
-
-  .header li a {
-    padding: 20px 30px; }
-
-  .header .menu {
-    margin: 0; }
 
   .header .menu-icon {
     display: none; } }
@@ -688,6 +680,43 @@ footer p {
 header {
   top: 0; }
 
+.downloadsBody {
+  text-align: center;
+  padding-top: 58px; }
+  .downloadsBody h1 {
+    font-weight: bold;
+    margin: 0;
+    padding: 30px;
+    font-size: 50px; }
+  .downloadsBody p {
+    margin: 0;
+    padding: 30px;
+    padding-top: 0;
+    font-size: 30px; }
+  .downloadsBody .downloadLinks {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    max-width: 500px;
+    margin: 0 auto; }
+    .downloadsBody .downloadLinks a {
+      text-decoration: none; }
+      .downloadsBody .downloadLinks a .downloadBtn {
+        color: white;
+        background-color: #2E2260;
+        padding: 15px;
+        font-size: 28px;
+        border-radius: 10px;
+        box-shadow: 4px 4px 13px 3px rgba(0, 0, 0, 0.13);
+        transition: 0.3s; }
+      .downloadsBody .downloadLinks a .downloadBtn:hover {
+        background-color: #453391; }
+
+@media only screen and (max-width: 593px) {
+  .downloadsBody .downloadLinks {
+    grid-template-columns: 1fr; }
+    .downloadsBody .downloadLinks a {
+      margin: 0 30px; } }
 @media only screen and (min-width: 30rem) {
   #aside1 {
     grid-area: aside1; }

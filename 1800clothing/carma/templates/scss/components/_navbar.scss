@@ -52,7 +52,7 @@
     color: white;
     padding-top: .25rem;
     img {
-      padding-top: .5rem;
+      //padding-top: .5rem;
       margin-right: 20px;
     }
   }
@@ -75,8 +75,7 @@
     cursor: pointer;
     display: inline-block;
     // float: right;
-    padding: 28px 25px;
-    margin-top: 8px;
+    padding: 28px 25px; 
     position: relative;
     user-select: none;
   }
@@ -138,17 +137,17 @@
   
   /* 48em = 768px */
   
-  @media (min-width: 52em) {
+  @media (min-width: 960px) {
     .header ul {
       display: flex;
       justify-content: space-evenly;
     }
-    .header li a {
-      padding: 20px 30px;
-    }
-    .header .menu {
-      margin: 0;
-    }
+    // .header li a {
+    //   padding: 20px 30px;
+    // }
+    // .header .menu {
+    //   margin: 0;
+    // }
     .header .menu-icon {
       display: none;
     }

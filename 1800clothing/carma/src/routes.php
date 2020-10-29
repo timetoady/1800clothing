@@ -233,7 +233,7 @@ $app->get('/[{name}]', function (Request $request, Response $response, array $ar
     $this->logger->info("Slim-Skeleton '/' route");
 
     // Render index view
-    return $this->renderer->render($response, 'index.html', $args);
+    return $this->renderer->render($response, 'root.html', $args);
 });
 //$app->add(new ApiKeyAuth);
 

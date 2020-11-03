@@ -131,7 +131,7 @@
             <div class="costumes" v-for="costume in displayedCostumes" v-cloak>
               <div class="costumeCard" v-on:click="setPopup(costume.id)">
                 <div class="card-body thumbnail" data-toggle="modal" v-bind:data-target="'#' + costume.id">
-                  <img class="cardImg" v-bind:src=" '/carma/assets/thumbnails/' + costume.thumbnail" alt="Card image cap" data-toggle="modal" v-bind:data-target="'#' + costume.id">
+                  <img class="cardImg" v-bind:src=" './assets/thumbnails/' + costume.thumbnail" alt="Card image cap" data-toggle="modal" v-bind:data-target="'#' + costume.id">
                   <!-- PREVIOUS CODE: <h5 class="capitalize"><span style="text-transform: capitalize;">{{costume.person}}</span> clothing from {{costume.year_from}} to {{costume.year_to}}</h5> -->
                   <h5 class="cardText">{{costume.caption}}</h5>
                   <!--Buttons for Admin Mode-->
@@ -165,8 +165,8 @@
           </div>
           <div class="popupGrid">
             <div class="fullsize">
-              <img v-bind:src=" '/carma/assets/images/' + popupCostume.image" alt="Card image" target="_blank">
-              <div class="fullsizeLink"><a v-bind:href=" '/carma/assets/images/' + popupCostume.image" target="_blank">Open Full Size Image</a></div>
+              <img v-bind:src=" './assets/images/' + popupCostume.image" alt="Card image" target="_blank">
+              <div class="fullsizeLink"><a v-bind:href=" './assets/images/' + popupCostume.image" target="_blank">Open Full Size Image</a></div>
             </div>
             <div class="popupFooter">
                 <div class="popupFooterDesc"><b>Description:</b> {{popupCostume.description}}</div>

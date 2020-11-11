@@ -5,16 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="1800 Clothing">
   <meta name="author" content="Carma">
-  <link rel="icon" href="dist/img/vue-logo.png">
-
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400&display=swap" rel="stylesheet">
   <title>Costumes</title>
-
-  <!-- Bootstrap core CSS -->
-  <!-- REMOVED because it's messing with the styling for the nav bar and it's bad for organization
-    <link href="./css/bootstrap.min.css" rel="stylesheet"> -->
-
-  <!-- Custom styles for this template -->
-  <!--<link href="dist/css/pagination-style.css" rel="stylesheet">-->
   <link rel="stylesheet" href="./css/mdi-icons.css">
   <link href="./css/offcanvas.css" rel="stylesheet">
   <link href="./scss/styles.css" rel="stylesheet">
@@ -39,9 +31,10 @@
     </ul>
   </header>
 
-  <main role="main" id="carma-app" class ="carma">
+  <main role="main" id="carma-app" class="carma">
 
       <div class="appGrid">
+        <div><!-- this is empty because .searchArea has a fixed position, and CSS grid needs an empty element --></div>
         <div class="searchArea">
           <!-- Search Box -->
           <input type="text" v-model="searchInput" class="form-control" placeholder="Search">
@@ -94,69 +87,69 @@
           </div>
 
 
-            <!--Checkbox Buttons-->
-            <h5>Filter by Person</h5>
-            <div class="filterCheck">
-              <input @click="checkMark()" type="checkbox" value="family" v-model="checkedItems" id="family" vchecked>
-              <label for="defaultCheck1">
-                <b>Family</b>
-              </label>
-            </div>
-            <div class="filterCheck">
-              <input type="checkbox" value="women" v-model="checkedItems" id="women">
-              <label for="defaultCheck2">
-                <b>Women</b>
-              </label>
-            </div>
-            <div class="filterCheck">
-              <input type="checkbox" value="men" v-model="checkedItems" id="men">
-              <label for="defaultCheck3">
-                <b>Men</b>
-              </label>
-            </div>
-            <div class="filterCheck">
-              <input type="checkbox" value="child" v-model="checkedItems" id="child">
-              <label for="defaultCheck4">
-                <b>Child</b>
-              </label>
-            </div>
-
+          <!--Checkbox Buttons-->
+          <h5>Filter by Person</h5>
+          <div class="filterCheck">
+            <input @click="checkMark()" type="checkbox" value="family" v-model="checkedItems" id="family" vchecked>
+            <label for="defaultCheck1">
+              <b>Family</b>
+            </label>
+          </div>
+          <div class="filterCheck">
+            <input type="checkbox" value="women" v-model="checkedItems" id="women">
+            <label for="defaultCheck2">
+              <b>Women</b>
+            </label>
+          </div>
+          <div class="filterCheck">
+            <input type="checkbox" value="men" v-model="checkedItems" id="men">
+            <label for="defaultCheck3">
+              <b>Men</b>
+            </label>
+          </div>
+          <div class="filterCheck">
+            <input type="checkbox" value="child" v-model="checkedItems" id="child">
+            <label for="defaultCheck4">
+              <b>Child</b>
+            </label>
           </div>
 
-          <!-- Costume boxes -->
-          <!-- 
-            caption, clothing, description, id, image, person, source, thumbnail, year_from, _year_to
-          -->
-          <div class="costumeArea">
-            <div class="costumes" v-for="costume in displayedCostumes" v-cloak>
-              <div class="costumeCard" v-on:click="setPopup(costume.id)">
-                <div class="card-body thumbnail" data-toggle="modal" v-bind:data-target="'#' + costume.id">
-                  <img class="cardImg" v-bind:src=" './assets/thumbnails/' + costume.thumbnail" alt="Card image cap" data-toggle="modal" v-bind:data-target="'#' + costume.id">
-                  <!-- PREVIOUS CODE: <h5 class="capitalize"><span style="text-transform: capitalize;">{{costume.person}}</span> clothing from {{costume.year_from}} to {{costume.year_to}}</h5> -->
-                  <div class="cardText">{{costume.caption}}</div>
-                  <div class="cardTags">
-                    <div class="cardTag">{{costume.year_from}} - {{costume.year_to}}</div>
-                    <div class="cardTag">{{costume.person}}</div>
-                    <div class="cardTag">{{costume.clothing}}</div>
-                  </div>
-                  <!--Buttons for Admin Mode-->
-                  <!--<p class="card-text">{{post.description}}...</p>-->
-                  <!--<div class="d-flex justify-content-between align-items-center">-->
-                  <!--    <div class="btn-group">-->
-                  <!--   <button type="button" class="btn btn-sm btn-outline-secondary">View</button>-->
-                  <!--<button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
-                  <!--    </div>-->
+        </div>
 
+        <!-- Costume boxes -->
+        <!-- 
+          caption, clothing, description, id, image, person, source, thumbnail, year_from, _year_to
+        -->
+        <div class="costumeArea">
+          <div class="costumes" v-for="costume in displayedCostumes" v-cloak>
+            <div class="costumeCard" v-on:click="setPopup(costume.id)">
+              <div class="card-body thumbnail" data-toggle="modal" v-bind:data-target="'#' + costume.id">
+                <img class="cardImg" v-bind:src=" './assets/thumbnails/' + costume.thumbnail" alt="Card image cap" data-toggle="modal" v-bind:data-target="'#' + costume.id">
+                <!-- PREVIOUS CODE: <h5 class="capitalize"><span style="text-transform: capitalize;">{{costume.person}}</span> clothing from {{costume.year_from}} to {{costume.year_to}}</h5> -->
+                <div class="cardText">{{costume.caption}}</div>
+                <div class="cardTags">
+                  <div class="cardTag">{{costume.year_from}} - {{costume.year_to}}</div>
+                  <div class="cardTag">{{costume.person}}</div>
+                  <div class="cardTag">{{costume.clothing}}</div>
                 </div>
+                <!--Buttons for Admin Mode-->
+                <!--<p class="card-text">{{post.description}}...</p>-->
+                <!--<div class="d-flex justify-content-between align-items-center">-->
+                <!--    <div class="btn-group">-->
+                <!--   <button type="button" class="btn btn-sm btn-outline-secondary">View</button>-->
+                <!--<button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                <!--    </div>-->
+
               </div>
             </div>
-
-          <ul class="pagination">
-            <button type="button" class="paginationNextPrev" v-if="page != 1" @click="page--">Previous</button>
-            <button type="button" class="paginationBtn" v-for="pageNumber in pages.slice(page-1, page+5)" @click="page = pageNumber">{{pageNumber}}</button>
-            <button type="button" @click="page++" v-if="page < pages.length" class="paginationNextPrev">Next</button>
-          </ul>
+          </div>
         </div>
+        <!-- Pagination -->
+        <ul class="pagination" v-cloak>
+          <button type="button" class="paginationNextPrev" v-if="page != 1" @click="page--; scrollToTop()">Previous</button>
+          <button href="#" type="button" class="paginationBtn" v-for="pageNumber in pages.slice(page-1, page+5)" @click="page = pageNumber; scrollToTop()">{{pageNumber}}</button>
+          <button type="button" @click="page++; scrollToTop()" v-if="page < pages.length" class="paginationNextPrev">Next</button>
+        </ul>
       </div>
 
       <!-- Popup Box -->

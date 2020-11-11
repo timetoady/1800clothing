@@ -64,6 +64,10 @@ const carma_app = new Vue({
             let to = (page * perPage);
             return costumes.slice(from, to);
         },
+        scrollToTop(){
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0;
+        },
         yearRangeSearch: function(year_from, year_to) {
 
             if (this.year_from == year_from && this.year_to == year_to) {

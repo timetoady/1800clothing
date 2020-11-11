@@ -325,7 +325,7 @@ footer {
   font-size: .75rem;
   padding: 1rem 0;
   width: 100%;
-  position: fixed;
+  position: relative;
   left: 0;
   bottom: 0; }
 
@@ -527,10 +527,13 @@ footer p {
 .appGrid {
   display: grid;
   grid-template-columns: 250px 1fr;
-  padding-top: 58px; }
+  padding-top: 58px;
+  min-height: calc(100vh - 103px); }
   .appGrid .searchArea {
     padding: 20px;
-    padding-right: 0; }
+    padding-right: 0;
+    position: absolute;
+    top: 0; }
     .appGrid .searchArea input[type="text"] {
       padding: 8px;
       border: 1px solid grey;
@@ -553,7 +556,8 @@ footer p {
     margin: 0 auto;
     padding-right: 20px;
     max-width: 1500px;
-    padding: 20px; }
+    padding: 20px;
+    align-items: center; }
     .appGrid .costumeArea .costumes .costumeCard {
       margin: 5px;
       background-color: white;
@@ -580,25 +584,23 @@ footer p {
           display: block;
           text-align: center; }
           .appGrid .costumeArea .costumes .costumeCard .card-body .cardTags .cardTag {
-            background-color: #c7c7c7;
-            color: black;
+            background-color: #dfdfdf;
+            color: #181818;
             padding: 5px;
             margin-right: 5px;
             font-size: 12px;
             border-radius: 5px;
             display: inline-block;
             text-transform: capitalize; }
-    .appGrid .costumeArea JS
-    .pagination {
-      width: 100%;
-      grid-column: 1 / span 2;
-      text-align: center; }
-      .appGrid .costumeArea JS
-      .pagination button {
-        padding: 7px 10px;
-        display: inline-block;
-        margin: 0 3px;
-        cursor: pointer; }
+  .appGrid .pagination {
+    width: 100%;
+    grid-column: 1 / span 2;
+    text-align: center; }
+    .appGrid .pagination button {
+      padding: 7px 10px;
+      display: inline-block;
+      margin: 0 3px;
+      cursor: pointer; }
 
 .popup {
   display: fixed;
@@ -615,6 +617,7 @@ footer p {
   .popup .popupContent {
     opacity: 0;
     background-color: white;
+    background-image: url("../assets/LIghtBg.png");
     width: 1000px;
     border-radius: 10px;
     padding: 30px;
@@ -633,7 +636,8 @@ footer p {
         margin: 0;
         font-size: 30px;
         padding-bottom: 30px;
-        padding-right: 30px; }
+        padding-right: 30px;
+        font-weight: bold; }
       .popup .popupContent .popupHeader .closeButton {
         position: absolute;
         right: 0;
@@ -764,7 +768,7 @@ header {
     max-width: 64%; }
 
   .siteWrap {
-    min-height: calc(100vh - 57px); }
+    min-height: calc(100vh - 45px); }
 
   .header {
     display: flex;

@@ -1,15 +1,19 @@
+$navColor: #2E2260;
+
+
 .pageTitle {
   padding-top: 10vh;
   text-align: center;
   font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .flexContainer {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  width: 90%;
-  // padding-top: 20vh;
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
   justify-content: center;
   margin-bottom: 15vh;
@@ -34,9 +38,10 @@
   h3 {
     text-align: center;
     color: white;
-    font-size: 1.5rem;
+    font-size: 24px;
+    font-weight: 500;
     display: block;
-    background-color: rgba(0, 100, 0, 0.788);
+    background-color: #2e2260bb;
     position: relative;
     padding-top: 30px;
     padding-bottom: 30px;

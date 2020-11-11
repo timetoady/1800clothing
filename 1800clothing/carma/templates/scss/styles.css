@@ -311,14 +311,15 @@ html, body {
   margin: 0;
   height: 100%;
   font-family: 'Nunito Sans', sans-serif;
-  background-image: url("../assets/LIghtBg.png"); }
+  background-image: url("../assets/LIghtBg.png");
+  color: #1d1d1d; }
 
 .logo {
   position: relative;
   margin-top: 4px; }
 
 footer {
-  color: lightgrey;
+  color: white;
   background-color: #2E2261;
   font-weight: lighter;
   text-align: center;
@@ -363,13 +364,15 @@ footer p {
 .pageTitle {
   padding-top: 10vh;
   text-align: center;
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+  font-weight: bold; }
 
 .flexContainer {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  width: 90%;
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
   justify-content: center;
   margin-bottom: 15vh; }
@@ -390,9 +393,10 @@ footer p {
   .yearCard h3 {
     text-align: center;
     color: white;
-    font-size: 1.5rem;
+    font-size: 24px;
+    font-weight: 500;
     display: block;
-    background-color: rgba(0, 100, 0, 0.788);
+    background-color: #2e2260bb;
     position: relative;
     padding-top: 30px;
     padding-bottom: 30px;
@@ -533,7 +537,8 @@ footer p {
     padding: 20px;
     padding-right: 0;
     position: absolute;
-    top: 0; }
+    top: 58px;
+    font-weight: 300; }
     .appGrid .searchArea input[type="text"] {
       padding: 8px;
       border: 1px solid grey;
@@ -575,7 +580,7 @@ footer p {
           max-height: 200px;
           border-radius: 5px; }
         .appGrid .costumeArea .costumes .costumeCard .card-body .cardText {
-          font-weight: normal;
+          font-weight: 400;
           font-size: 20px;
           padding: 15px;
           margin: 0;
@@ -637,7 +642,7 @@ footer p {
         font-size: 30px;
         padding-bottom: 30px;
         padding-right: 30px;
-        font-weight: bold; }
+        font-weight: 900; }
       .popup .popupContent .popupHeader .closeButton {
         position: absolute;
         right: 0;
@@ -735,6 +740,9 @@ header {
     grid-template-columns: 1fr; }
     .downloadsBody .downloadLinks a {
       margin: 0 30px; } }
+h1 {
+  font-weight: 900; }
+
 @media only screen and (min-width: 30rem) {
   #aside1 {
     grid-area: aside1; }

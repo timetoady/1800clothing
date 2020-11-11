@@ -20,7 +20,8 @@ $navColor: #2E2260;
         padding: 20px;
         padding-right: 0;
         position: absolute;
-        top: 0;
+        top: 58px;
+        font-weight: 300;
         
         input[type="text"] {
             padding: 8px;
@@ -91,7 +92,7 @@ $navColor: #2E2260;
                         border-radius: 5px;
                     }
                     .cardText {
-                        font-weight: normal;
+                        font-weight: 400;
                         font-size: 20px;
                         padding: 15px;
                         margin: 0;
@@ -178,7 +179,7 @@ $navColor: #2E2260;
                 font-size: 30px;
                 padding-bottom: 30px;
                 padding-right: 30px;
-                font-weight: bold;
+                font-weight: 900;
             }
 
             .closeButton {

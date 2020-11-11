@@ -1,3 +1,5 @@
+$navColor: #2E2260;
+
 // animations
 @keyframes fadeIn {
     from {opacity: 0;}
@@ -61,6 +63,7 @@
         margin: 0 auto;
         padding-right: 20px;
         max-width: 1500px;
+        padding: 20px;
         //overflow: scroll;
 
         .costumes {
@@ -70,10 +73,10 @@
                 margin: 5px;
                 background-color: rgb(255, 255, 255);
                 border-radius: 10px;
-                border: 1px solid rgba(199, 199, 199, 0.089);
+                border: 3px solid rgba(199, 199, 199, 0.089);
                 -webkit-box-shadow: 10px 10px 31px -23px rgba(0,0,0,0.43);
                 -moz-box-shadow: 10px 10px 31px -23px rgba(0,0,0,0.43);
-                box-shadow: 10px 10px 31px -23px rgba(0,0,0,0.43);
+                box-shadow: 10px 10px 31px -23px rgba(0, 0, 0, 0.685);
                 cursor: pointer;
 
                 .card-body {
@@ -85,11 +88,27 @@
                         max-height: 200px;
                         border-radius: 5px;
                     }
-                    h5 {
+                    .cardText {
                         font-weight: normal;
                         font-size: 20px;
                         padding: 15px;
                         margin: 0;
+                        text-align: left;
+                    }
+                    .cardTags {
+                        display: block;
+                        text-align: center;
+                        //padding-left: 10px;
+                        .cardTag {
+                            background-color: rgb(199, 199, 199);
+                            color: black;
+                            padding: 5px;
+                            margin-right: 5px;
+                            font-size: 12px;
+                            border-radius: 5px;
+                            display: inline-block;
+                            text-transform: capitalize;
+                        }
                     }
                 }
             }

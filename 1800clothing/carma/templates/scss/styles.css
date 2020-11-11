@@ -552,15 +552,16 @@ footer p {
     grid-gap: 10px;
     margin: 0 auto;
     padding-right: 20px;
-    max-width: 1500px; }
+    max-width: 1500px;
+    padding: 20px; }
     .appGrid .costumeArea .costumes .costumeCard {
       margin: 5px;
       background-color: white;
       border-radius: 10px;
-      border: 1px solid rgba(199, 199, 199, 0.089);
+      border: 3px solid rgba(199, 199, 199, 0.089);
       -webkit-box-shadow: 10px 10px 31px -23px rgba(0, 0, 0, 0.43);
       -moz-box-shadow: 10px 10px 31px -23px rgba(0, 0, 0, 0.43);
-      box-shadow: 10px 10px 31px -23px rgba(0, 0, 0, 0.43);
+      box-shadow: 10px 10px 31px -23px rgba(0, 0, 0, 0.685);
       cursor: pointer; }
       .appGrid .costumeArea .costumes .costumeCard .card-body {
         text-align: center;
@@ -569,11 +570,24 @@ footer p {
           max-width: 200px;
           max-height: 200px;
           border-radius: 5px; }
-        .appGrid .costumeArea .costumes .costumeCard .card-body h5 {
+        .appGrid .costumeArea .costumes .costumeCard .card-body .cardText {
           font-weight: normal;
           font-size: 20px;
           padding: 15px;
-          margin: 0; }
+          margin: 0;
+          text-align: left; }
+        .appGrid .costumeArea .costumes .costumeCard .card-body .cardTags {
+          display: block;
+          text-align: center; }
+          .appGrid .costumeArea .costumes .costumeCard .card-body .cardTags .cardTag {
+            background-color: #c7c7c7;
+            color: black;
+            padding: 5px;
+            margin-right: 5px;
+            font-size: 12px;
+            border-radius: 5px;
+            display: inline-block;
+            text-transform: capitalize; }
     .appGrid .costumeArea JS
     .pagination {
       width: 100%;

@@ -43,7 +43,7 @@
 
       <div class="appGrid">
         <div class="searchArea">
-          <span class="fa fa-search form-control-feedback"></span>
+          <!-- Search Box -->
           <input type="text" v-model="searchInput" class="form-control" placeholder="Search">
 
           <!--Radio Buttons-->
@@ -133,7 +133,12 @@
                 <div class="card-body thumbnail" data-toggle="modal" v-bind:data-target="'#' + costume.id">
                   <img class="cardImg" v-bind:src=" './assets/thumbnails/' + costume.thumbnail" alt="Card image cap" data-toggle="modal" v-bind:data-target="'#' + costume.id">
                   <!-- PREVIOUS CODE: <h5 class="capitalize"><span style="text-transform: capitalize;">{{costume.person}}</span> clothing from {{costume.year_from}} to {{costume.year_to}}</h5> -->
-                  <h5 class="cardText">{{costume.caption}}</h5>
+                  <div class="cardText">{{costume.caption}}</div>
+                  <div class="cardTags">
+                    <div class="cardTag">{{costume.year_from}} - {{costume.year_to}}</div>
+                    <div class="cardTag">{{costume.person}}</div>
+                    <div class="cardTag">{{costume.clothing}}</div>
+                  </div>
                   <!--Buttons for Admin Mode-->
                   <!--<p class="card-text">{{post.description}}...</p>-->
                   <!--<div class="d-flex justify-content-between align-items-center">-->

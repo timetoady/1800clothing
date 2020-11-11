@@ -106,7 +106,7 @@ const carma_app = new Vue({
             
             if (this.checkedItems.length > 0) {
                 costumes = this.costumes.filter(post =>  this.checkedItems.includes(post.person));
-                costumes = costumes.filter(post => { return post.description.toLowerCase().includes(this.searchInput.toLowerCase()); });
+                costumes = costumes.filter(post => { return post.caption.toLowerCase().includes(this.searchInput.toLowerCase()); });
                 this.pages = [];
                 let numberOfPages = Math.ceil(costumes.length / this.perPage);
                 for (let index = 1; index <= numberOfPages; index++) { this.pages.push(index); }
@@ -114,7 +114,7 @@ const carma_app = new Vue({
             }
             
             else if (!this.searchInput == '') {
-                costumes = this.costumes.filter(post => { return post.description.toLowerCase().includes(this.searchInput.toLowerCase()); });
+                costumes = this.costumes.filter(post => { return post.caption.toLowerCase().includes(this.searchInput.toLowerCase()); });
                 this.pages = [];
                 let numberOfPages = Math.ceil(costumes.length / this.perPage);
                 for (let index = 1; index <= numberOfPages; index++) { this.pages.push(index); }

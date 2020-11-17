@@ -18,13 +18,14 @@
 //   overflow-y: scroll;
 // }
 
-html, body {
+body {
   margin: 0;
   height: 100%;
   font-family: 'Nunito Sans', sans-serif;
   // background-image: url("../assets/text_bg.jpg");
   background-image: url("../assets/LIghtBg.png");
   color: rgb(29, 29, 29);
+  overflow: initial;
 }
 
 .logo {

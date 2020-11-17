@@ -312,7 +312,8 @@ html, body {
   height: 100%;
   font-family: 'Nunito Sans', sans-serif;
   background-image: url("../assets/LIghtBg.png");
-  color: #1d1d1d; }
+  color: #1d1d1d;
+  overflow: initial; }
 
 .logo {
   position: relative;
@@ -777,9 +778,6 @@ h1 {
 
   .siteWrap {
     min-height: calc(100vh - 45px); }
-
-  .body {
-    overflow: initial; }
 
   .header {
     display: flex;

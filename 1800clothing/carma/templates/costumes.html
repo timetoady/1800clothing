@@ -153,8 +153,8 @@
       </div>
 
       <!-- Popup Box -->
-      <div class="popup" tabindex="-1" v-if="popupCostume.display" v-cloak>
-        <div class="popupContent" v-on:click="togglePopup">
+      <div class="popup" v-on:click="togglePopup" tabindex="-1" v-if="popupCostume.display" v-cloak>
+        <div class="popupContent">
           <div class="popupHeader">
             <button v-on:click="togglePopup" class="closeButton" title="Close">
               <span>&times;</span>

@@ -49,7 +49,9 @@ const carma_app = new Vue({
             this.togglePopup()
         },
         togglePopup() {
-            this.popupCostume.display = !this.popupCostume.display
+            if(this.popupCostume.display === true){
+                this.popupCostume.display = !this.popupCostume.display
+            }
         },
         setPages() {
             let numberOfPages = Math.ceil(this.costumes.length / this.perPage);

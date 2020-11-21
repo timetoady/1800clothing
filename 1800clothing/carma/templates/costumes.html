@@ -120,7 +120,7 @@
         <!-- 
           caption, clothing, description, id, image, person, source, thumbnail, year_from, _year_to
         -->
-        <div class="costumeArea">
+        <div class="costumeArea" v-on:click="togglePopup">
           <div class="costumes" v-for="costume in displayedCostumes" v-cloak>
             <div class="costumeCard" v-on:click="setPopup(costume.id)">
               <div class="card-body thumbnail" data-toggle="modal" v-bind:data-target="'#' + costume.id">
@@ -153,7 +153,7 @@
       </div>
 
       <!-- Popup Box -->
-      <div class="popup" v-on:click="togglePopup" tabindex="-1" v-if="popupCostume.display" v-cloak>
+      <div class="popup" tabindex="-1" v-if="popupCostume.display" v-cloak>
         <div class="popupContent">
           <div class="popupHeader">
             <button v-on:click="togglePopup" class="closeButton" title="Close">

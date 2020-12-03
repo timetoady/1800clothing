@@ -139,8 +139,7 @@ $navColor: #2E2260;
 }
 
 .popup {
-    display: fixed;
-    position: absolute;
+    position: fixed;
     z-index: 999;
     width: 100%;
     height: 100%;

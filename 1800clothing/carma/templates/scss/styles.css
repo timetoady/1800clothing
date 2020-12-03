@@ -442,13 +442,26 @@ footer p {
   padding-left: 10px;
   text-decoration: none;
   color: white;
-  padding-top: .25rem; }
+  padding-top: 6px; }
   .header .logo img {
     margin-right: 20px; }
 
 /* menu */
 .header .menu {
-  transition: max-height .2s ease-out; }
+  transition: max-height .2s ease-out;
+  font-size: 18px;
+  font-weight: 300;
+  padding-right: 20px;
+  /* Downloads button emphasis */ }
+  .header .menu li:last-child a {
+    padding: 12px;
+    margin: 8px;
+    background-color: #6656B2;
+    border-radius: 8px;
+    transition: background-color 0.5s; }
+  .header .menu li:last-child:hover a {
+    background-color: #8679c2;
+    text-decoration: none; }
 
 /* menu icon */
 .menu {
@@ -706,7 +719,8 @@ header {
 
 .downloadsBody {
   text-align: center;
-  padding-top: 58px; }
+  padding-top: 58px;
+  padding-bottom: 58px; }
   .downloadsBody h1 {
     font-weight: bold;
     margin: 0;
@@ -796,5 +810,14 @@ h1 {
     left: 0;
     bottom: 0; } }
 /* end of media query */
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit; }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,3 +1,4 @@
+$emphasisColor: #6656B2;
 
 /* header */
 
@@ -50,7 +51,8 @@
     padding-left: 10px;
     text-decoration: none;
     color: white;
-    padding-top: .25rem;
+    padding-top: 6px;
+
     img {
       //padding-top: .5rem;
       margin-right: 20px;
@@ -63,6 +65,29 @@
     // clear: both;
     // max-height: 0;
     transition: max-height .2s ease-out;
+    font-size: 18px;
+    font-weight: 300;
+    padding-right: 20px;
+
+    /* Downloads button emphasis */ 
+    
+    li:last-child {
+      a {
+        padding: 12px;
+        margin: 8px;
+        background-color: $emphasisColor;
+        border-radius: 8px;
+        transition: background-color 0.5s;
+      }
+    }
+    li:last-child:hover {
+      //text-decoration: underline;
+      a {
+        background-color: lighten($emphasisColor, 10%);
+        text-decoration: none;
+
+      }
+    }
   }
   
   /* menu icon */

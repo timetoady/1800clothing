@@ -327,7 +327,7 @@ footer {
   font-size: .75rem;
   padding: 1rem 0;
   width: 100%;
-  position: absolute;
+  position: relative;
   left: 0;
   bottom: 0; }
 
@@ -806,7 +806,7 @@ h1 {
     margin-right: 0; }
 
   footer {
-    position: absolute;
+    position: relative;
     left: 0;
     bottom: 0; } }
 /* end of media query */

@@ -631,7 +631,8 @@ footer p {
   top: 0;
   background-color: rgba(0, 0, 0, 0.61);
   animation-name: fadeIn;
-  animation-duration: 0.3s; }
+  animation-duration: 0.3s;
+  overflow: hidden; }
   .popup .popupContent {
     opacity: 0;
     background-color: white;

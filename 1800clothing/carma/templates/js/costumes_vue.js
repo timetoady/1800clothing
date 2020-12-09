@@ -32,6 +32,10 @@ const carma_app = new Vue({
         getCostumes() {
             axios.get(this.baseUrl)
                 .then(response => {
+                    if (document.querySelector('.loading') !== null) {
+                        document.querySelector('.loading').remove()
+                    }
+                    document.querySelector('.costumeArea').style.display = 'grid'
                     this.costumes = response.data;
                 })
                 .catch(response => {

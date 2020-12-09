@@ -569,7 +569,7 @@ footer p {
       padding: 4px 0;
       padding-top: 0; }
   .appGrid .costumeArea {
-    display: grid;
+    display: block;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 10px;
     margin: 0 auto;
@@ -577,6 +577,24 @@ footer p {
     max-width: 1500px;
     padding: 20px;
     align-items: center; }
+    .appGrid .costumeArea .loading {
+      text-align: center;
+      margin-top: 100px; }
+      .appGrid .costumeArea .loading .row {
+        display: flex;
+        margin: 0 auto;
+        max-width: 400px; }
+        .appGrid .costumeArea .loading .row .lds-ellipsis {
+          margin-right: 15px; }
+      .appGrid .costumeArea .loading h2 {
+        opacity: 0;
+        font-weight: 500;
+        animation-name: fadeIn;
+        animation-delay: 3s;
+        animation-duration: 0.3s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+        line-height: 1.4; }
     .appGrid .costumeArea .costumes .costumeCard {
       margin: 5px;
       background-color: white;
@@ -701,6 +719,11 @@ footer p {
       font-size: 20px; }
     .popup .popupContent .popupGrid .fullsize img {
       max-width: 200px; } }
+@media only screen and (max-width: 690px) {
+  .appGrid .costumeArea .loading .row {
+    display: block; }
+    .appGrid .costumeArea .loading .row h1 {
+      margin-top: -5px; } }
 @media only screen and (max-width: 593px) {
   .appGrid {
     grid-template-columns: 1fr; }
@@ -758,6 +781,52 @@ header {
 h1 {
   font-weight: 900; }
 
+.lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px; }
+
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #1D1D1D;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0); }
+
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite; }
+
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite; }
+
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite; }
+
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite; }
+
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0); }
+  100% {
+    transform: scale(1); } }
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1); }
+  100% {
+    transform: scale(0); } }
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0); }
+  100% {
+    transform: translate(24px, 0); } }
 @media only screen and (min-width: 30rem) {
   #aside1 {
     grid-area: aside1; }

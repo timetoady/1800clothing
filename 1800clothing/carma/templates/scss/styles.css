@@ -726,7 +726,17 @@ footer p {
       margin-top: -5px; } }
 @media only screen and (max-width: 593px) {
   .appGrid {
-    grid-template-columns: 1fr; }
+    grid-template-columns: 1fr;
+    display: block; }
+    .appGrid .emptyDiv {
+      height: 0;
+      width: 0;
+      padding: 0;
+      margin: 0; }
+    .appGrid .searchArea {
+      position: relative;
+      display: block;
+      top: 0; }
     .appGrid .costumeArea {
       padding: 10px; }
 

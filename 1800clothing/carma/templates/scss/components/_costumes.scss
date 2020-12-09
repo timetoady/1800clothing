@@ -315,6 +315,20 @@ $navColor: #2E2260;
 @media only screen and (max-width: 593px) {
     .appGrid {
         grid-template-columns: 1fr;
+        display: block;
+
+        .emptyDiv {
+            height: 0;
+            width: 0;
+            padding: 0;
+            margin: 0;
+        }
+
+        .searchArea {
+            position: relative;
+            display: block;
+            top: 0;
+        }
 
         .costumeArea {
             padding: 10px;

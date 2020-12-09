@@ -20,7 +20,7 @@ $navColor: #2E2260;
     .searchArea {
         padding: 20px;
         padding-right: 0;
-        position: absolute;
+        position: fixed;
         top: 58px;
         font-weight: 300;
         
@@ -32,7 +32,7 @@ $navColor: #2E2260;
 
         h5 {
             font-size: 23px;
-            margin: 10px 0;
+            margin: 15px 0;
         }
 
         .decadeRadio {
@@ -136,9 +136,9 @@ $navColor: #2E2260;
                         .cardTag {
                             background-color: rgb(243, 243, 243);
                             color: rgb(24, 24, 24);
-                            padding: 5px;
+                            padding: 8px;
                             margin-right: 5px;
-                            font-size: 12px;
+                            font-size: 13px;
                             border-radius: 5px;
                             display: inline-block;
                             text-transform: capitalize;

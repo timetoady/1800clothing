@@ -550,7 +550,7 @@ footer p {
   .appGrid .searchArea {
     padding: 20px;
     padding-right: 0;
-    position: absolute;
+    position: fixed;
     top: 58px;
     font-weight: 300; }
     .appGrid .searchArea input[type="text"] {
@@ -559,7 +559,7 @@ footer p {
       border-radius: 5px; }
     .appGrid .searchArea h5 {
       font-size: 23px;
-      margin: 10px 0; }
+      margin: 15px 0; }
     .appGrid .searchArea .decadeRadio {
       font-size: 15px;
       padding: 4px 0;
@@ -623,9 +623,9 @@ footer p {
           .appGrid .costumeArea .costumes .costumeCard .card-body .cardTags .cardTag {
             background-color: #f3f3f3;
             color: #181818;
-            padding: 5px;
+            padding: 8px;
             margin-right: 5px;
-            font-size: 12px;
+            font-size: 13px;
             border-radius: 5px;
             display: inline-block;
             text-transform: capitalize; }
